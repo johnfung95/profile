@@ -1,13 +1,15 @@
-import Header from "./components/UI/Header";
-import Background from "./components/UI/Background";
 import React from "react";
+import Landing from "./components/Landing";
+import Header from "./components/Header";
+import Background from "./components/Background";
 
 function App() {
   return (
-    <React.Fragment>
+    <main className="h-screen w-full">
       <Header />
+      <Landing />
       <Background />
-    </React.Fragment>
+    </main>
   );
 }
 
