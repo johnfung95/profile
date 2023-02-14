@@ -2,9 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav className="w-full inline-flex">
-      <div className="flex-1 p-1">icon</div>
-      <div className="flex-1 p-1">
+    <nav className="z-10 w-full inline-flex sticky">
+      <div className="flex-1 p-3 text-white ">icon</div>
+      <div className="flex-1 p-3 text-white">
         <ul className="flex items-center justify-around">
           <li>
             <a href="/">Testing</a>
