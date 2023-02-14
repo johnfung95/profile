@@ -2,11 +2,15 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div className="h-full w-full flex items-center justify-center z-10 text-white relative">
-      <div className="w-40">
-        <img src="/logo512.png" alt="pic" className="w-40"></img>
+    <div className="h-full w-full flex flex-nowrap items-center justify-center z-10 text-white relative">
+      <div className="w-full flex justify-center items-center">
+        <img src="/logo512.png" alt="pic" className="w-auto"></img>
       </div>
-      <div>description</div>
+      <div className="w-full text-center">
+        <p>Demo Paragraph Many Words.................</p>
+        <p>Demo Paragraph Many Words.................</p>
+        <p>Demo Paragraph Many Words.................</p>
+      </div>
     </div>
   );
 };
