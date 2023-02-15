@@ -9,3 +9,13 @@ html {
 body {
     height: 100vh
 }
+
+#tsparticles {
+    position: absolute;
+    z-index: -1
+}
+
+.motto {
+    font-size: 5rem;
+    font-family: 'Libre Baskerville', serif;
+}

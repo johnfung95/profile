@@ -6,7 +6,7 @@ import Background from "./components/Background";
 function App() {
   return (
     <main className="h-screen w-full">
-      <Header />
+      {/* <Header /> */}
       <Landing />
       <Background />
     </main>
