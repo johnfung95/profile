@@ -16,6 +16,18 @@ body {
 }
 
 .motto {
-    font-size: 5rem;
     font-family: 'Libre Baskerville', serif;
+}
+
+.half {
+    background: linear-gradient(to right, rgb(183,88,206) 50%,black 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1s ease-out;
+    font-weight: bold
+}
+
+.half:hover {
+    background-position: left bottom;
+    transform: scale(1.1);
 }
