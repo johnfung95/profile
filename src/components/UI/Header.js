@@ -3,18 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
-  if (location.pathname !== "/main") {
-  }
 
   return (
-    <nav className="z-10 w-full inline-flex relative">
-      <div className="flex-1 p-3 text-white">
-        <Link to={location.pathname === "/main" ? location.pathname : "/main"}>
-          <img src="/logo192.png" alt="pic" className="w-12"></img>
-        </Link>
-      </div>
-      <div className="flex-1 p-3 text-white">
+    <nav className="flex w-full relative pt-4">
+      <div className="flex-1 p-3">
         <ul className="flex items-center justify-around">
+          <li>
+            <Link to={location.pathname === "/me" ? location.pathname : "/me"}>
+              <img src="/logo192.png" alt="pic" className="w-16 h-16"></img>
+            </Link>
+          </li>
           <li>
             <Link to="new1">Testing</Link>
           </li>

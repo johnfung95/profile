@@ -4,21 +4,24 @@ import { motion } from "framer-motion";
 
 const Landing = () => {
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center text-white md:flex-row flex-nowrap  ">
+    <div className="h-full w-full flex flex-col items-center justify-center md:flex-row flex-nowrap  ">
       <motion.div
         className="w-full flex justify-center md:justify-end items-center"
-        initial={{ opacity: 0, scale: 0.5 }}
+        initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
           default: {
-            duration: 0.3,
-            ease: [0, 0.71, 0.2, 1.01],
+            duration: 0.8,
+            ease: [0, 0.85, 0.75, 1.03],
           },
           scale: {
             type: "spring",
-            damping: 5,
-            stiffness: 100,
+            damping: 3,
+            stiffness: 50,
             restDelta: 0.001,
+            repeat: Infinity,
+            repeatType: "reverse",
+            repeatDelay: 5,
           },
         }}
       >
@@ -31,7 +34,7 @@ const Landing = () => {
           <p>Demo Paragraph Many Words.................</p>
           <p>Demo Paragraph Many Words.................</p>
           <button className="half rounded-2xl italic w-32 h-8 mt-8">
-            <Link to="main">Enter</Link>
+            <Link to="me">Enter</Link>
           </button>
         </div>
       </div>
