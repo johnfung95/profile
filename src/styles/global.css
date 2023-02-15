@@ -9,10 +9,12 @@
 
 html {
     height: 100%;
+    color: white;
 }
 
 body {
     height: 100%;
+    color: white;
 }
 
 #tsparticles {

@@ -3,15 +3,15 @@ import ContentCard from "./UI/ContentCard";
 import Header from "./UI/Header";
 import Background from "./UI/Background";
 
-const Aboutme = () => {
+const Exp = () => {
   return (
     <React.Fragment>
       <Background />
       <Header />
       <main className="h-full w-full">
         <ContentCard>
-          <div className="text-white">
-            <p>Testing About me</p>
+          <div>
+            <p>Testing Work Exp ...</p>
           </div>
         </ContentCard>
       </main>
@@ -19,4 +19,4 @@ const Aboutme = () => {
   );
 };
 
-export default Aboutme;
+export default Exp;
