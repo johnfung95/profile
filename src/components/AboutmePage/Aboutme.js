@@ -1,9 +1,9 @@
 import React from "react";
-import ContentCard from "./UI/ContentCard";
-import Header from "./UI/Header";
-import Background from "./UI/Background";
+import ContentCard from "../UI/ContentCard";
+import Header from "../UI/Header";
+import Background from "../UI/Background";
 
-const Comments = () => {
+const Aboutme = () => {
   return (
     <React.Fragment>
       <Background />
@@ -11,7 +11,7 @@ const Comments = () => {
       <main className="h-full w-full">
         <ContentCard>
           <div>
-            <p>Testing Comments ...</p>
+            <p>Testing About me</p>
           </div>
         </ContentCard>
       </main>
@@ -19,4 +19,4 @@ const Comments = () => {
   );
 };
 
-export default Comments;
+export default Aboutme;

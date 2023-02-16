@@ -1,7 +1,8 @@
 import React from "react";
-import ContentCard from "./UI/ContentCard";
-import Header from "./UI/Header";
-import Background from "./UI/Background";
+import ContentCard from "../UI/ContentCard";
+import Header from "../UI/Header";
+import Background from "../UI/Background";
+import ExpTimeline from "./ExpTimeline";
 
 const Exp = () => {
   return (
@@ -10,9 +11,7 @@ const Exp = () => {
       <Header />
       <main className="h-full w-full">
         <ContentCard>
-          <div>
-            <p>Testing Work Exp ...</p>
-          </div>
+          <ExpTimeline />
         </ContentCard>
       </main>
     </React.Fragment>

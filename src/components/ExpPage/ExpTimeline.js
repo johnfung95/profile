@@ -1,0 +1,77 @@
+import { Timeline } from "@mui/lab";
+import { TimelineItem } from "@mui/lab";
+import { TimelineSeparator } from "@mui/lab";
+import { TimelineConnector } from "@mui/lab";
+import { TimelineContent } from "@mui/lab";
+import { TimelineOppositeContent } from "@mui/lab";
+import { TimelineDot } from "@mui/lab";
+import { Typography } from "@mui/material";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import HotelIcon from "@mui/icons-material/Hotel";
+import RepeatIcon from "@mui/icons-material/Repeat";
+import { Hotel } from "@mui/icons-material";
+import { height } from "@mui/system";
+
+const dummyData = [
+  {
+    year: "2017",
+    company: "Company",
+    title: "Good Programmer",
+    description: "Fucked up!!!!!",
+    icon: null,
+  },
+  {
+    year: "2016",
+    company: "Company",
+    title: "Good Programmer",
+    description: "Fucked up!!!!!",
+    icon: null,
+  },
+  {
+    year: "2015",
+    company: "Company",
+    title: "Good Programmer",
+    description: "Fucked up!!!!!",
+    icon: null,
+  },
+
+  {
+    year: "2014",
+    company: "Company",
+    title: "Good Programmer",
+    description: "Fucked up!!!!!",
+    icon: <HotelIcon />,
+  },
+];
+
+const ExpTimeline = () => {
+  return (
+    <Timeline position="alternate">
+      {dummyData.map((data) => {
+        return (
+          <TimelineItem sx={{ height: "10rem" }}>
+            <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body1">
+              {data.year}
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot variant="outlined">
+                {data.icon === null ? <LaptopMacIcon /> : data.icon}
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ px: 1.4, m: "auto 0" }}>
+              <Typography variant="h6" component="span">
+                {data.company}
+              </Typography>
+              <Typography>{data.title}</Typography>
+            </TimelineContent>
+          </TimelineItem>
+        );
+      })}
+    </Timeline>
+  );
+};
+
+export default ExpTimeline;

@@ -2,10 +2,10 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Error from "./components/UI/Error";
-import Aboutme from "./components/Aboutme";
-import Exp from "./components/Exp";
-import Contacts from "./components/Contacts";
-import Comments from "./components/Comments";
+import Aboutme from "./components/AboutmePage/Aboutme";
+import Exp from "./components/ExpPage/Exp";
+import Contacts from "./components/ContactsPage/Contacts";
+import Comments from "./components/CommentsPage/Comments";
 import "./styles/global.css";
 import Landing from "./components/Landing";
 

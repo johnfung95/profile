@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorPage from "../ErrorPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import Header from "./Header";
 import ContentCard from "./ContentCard";
 

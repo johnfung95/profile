@@ -30,15 +30,17 @@ const Landing = () => {
         >
           <img src="/logo512.png" alt="pic" className="w-3/4"></img>
         </motion.div>
-        <div className="w-full pl-24 mt-8 md:mt-0">
+        <div className="w-full pl-24 mt-8 animate-fadeIn md:mt-0">
           <h1 className="motto ellipsis text-5xl md:text-7xl">My Motto....</h1>
           <div className="pl-8 mt-8">
             <p>My description</p>
             <p>Demo Paragraph Many Words.................</p>
             <p>Demo Paragraph Many Words.................</p>
-            <button className="half rounded-2xl italic w-32 h-8 mt-8">
-              <Link to="me">Enter</Link>
-            </button>
+            <Link to="me">
+              <button className="half rounded-2xl italic w-32 h-8 mt-8">
+                Enter
+              </button>
+            </Link>
           </div>
         </div>
       </div>
