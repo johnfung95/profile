@@ -8,13 +8,13 @@ const Comments = () => {
     <React.Fragment>
       <Background />
       <Header />
-      <main className="h-full w-full">
-        <ContentCard>
+      <ContentCard>
+        <main>
           <div>
             <p>Testing Comments ...</p>
           </div>
-        </ContentCard>
-      </main>
+        </main>
+      </ContentCard>
     </React.Fragment>
   );
 };

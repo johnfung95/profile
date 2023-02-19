@@ -1,6 +1,6 @@
 const ContentCard = (props) => {
   return (
-    <div className="w-3/4 h-3/4 flex flex-col items-center mx-auto my-9">
+    <div className="h-full flex flex-col justify-center items-center mx-auto">
       {props.children}
     </div>
   );

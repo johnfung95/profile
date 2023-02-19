@@ -9,11 +9,11 @@ const Exp = () => {
     <React.Fragment>
       <Background />
       <Header />
-      <main className="h-full w-full">
-        <ContentCard>
+      <ContentCard>
+        <main>
           <ExpTimeline />
-        </ContentCard>
-      </main>
+        </main>
+      </ContentCard>
     </React.Fragment>
   );
 };

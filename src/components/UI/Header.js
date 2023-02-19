@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <Background />
-      <nav className="flex w-full relative pt-4">
+      <nav className="flex w-full absolute pt-4">
         <div className="flex-1 p-3">
           <ul className="flex items-center justify-around">
             <li>

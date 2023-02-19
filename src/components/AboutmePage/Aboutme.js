@@ -8,13 +8,13 @@ const Aboutme = () => {
     <React.Fragment>
       <Background />
       <Header />
-      <main className="h-full w-full">
-        <ContentCard>
+      <ContentCard>
+        <main>
           <div>
             <p>Testing About me</p>
           </div>
-        </ContentCard>
-      </main>
+        </main>
+      </ContentCard>
     </React.Fragment>
   );
 };

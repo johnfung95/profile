@@ -6,12 +6,8 @@ import { TimelineContent } from "@mui/lab";
 import { TimelineOppositeContent } from "@mui/lab";
 import { TimelineDot } from "@mui/lab";
 import { Typography } from "@mui/material";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import HotelIcon from "@mui/icons-material/Hotel";
-import RepeatIcon from "@mui/icons-material/Repeat";
-import { Hotel } from "@mui/icons-material";
-import { height } from "@mui/system";
 
 const dummyData = [
   {
@@ -47,7 +43,7 @@ const dummyData = [
 
 const ExpTimeline = () => {
   return (
-    <Timeline position="alternate">
+    <Timeline position="alternate" sx={{ justifyContent: "center" }}>
       {dummyData.map((data) => {
         return (
           <TimelineItem sx={{ height: "10rem" }}>
@@ -56,7 +52,7 @@ const ExpTimeline = () => {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
-              <TimelineDot variant="outlined">
+              <TimelineDot color="primary" variant="outlined">
                 {data.icon === null ? <LaptopMacIcon /> : data.icon}
               </TimelineDot>
               <TimelineConnector />
