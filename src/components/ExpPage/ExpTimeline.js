@@ -43,30 +43,39 @@ const dummyData = [
 
 const ExpTimeline = () => {
   return (
-    <Timeline position="alternate" sx={{ justifyContent: "center" }}>
-      {dummyData.map((data) => {
-        return (
-          <TimelineItem sx={{ height: "10rem" }}>
-            <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body1">
-              {data.year}
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color="primary" variant="outlined">
-                {data.icon === null ? <LaptopMacIcon /> : data.icon}
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ px: 1.4, m: "auto 0" }}>
-              <Typography variant="h6" component="span">
-                {data.company}
-              </Typography>
-              <Typography>{data.title}</Typography>
-            </TimelineContent>
-          </TimelineItem>
-        );
-      })}
-    </Timeline>
+    <main className="flex items-center md:mt-16 h-full">
+      <Timeline position="alternate" sx={{ justifyContent: "center" }}>
+        {dummyData.map((data) => {
+          return (
+            <TimelineItem
+              sx={{
+                height: "10rem",
+                "@media screen and (max-width: 32rem)": {
+                  height: "7rem",
+                },
+              }}
+            >
+              <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body1">
+                {data.year}
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot color="primary" variant="outlined">
+                  {data.icon === null ? <LaptopMacIcon /> : data.icon}
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ px: 1.4, m: "auto 0" }}>
+                <Typography variant="h6" component="span">
+                  {data.company}
+                </Typography>
+                <Typography>{data.title}</Typography>
+              </TimelineContent>
+            </TimelineItem>
+          );
+        })}
+      </Timeline>
+    </main>
   );
 };
 

@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <React.Fragment>
       <Background />
-      <div className="flex flex-col items-center justify-center md:flex-row flex-nowrap  ">
+      <div className="h-full flex flex-col items-center justify-center md:flex-row flex-nowrap  ">
         <motion.div
           className="w-full flex justify-center md:justify-end items-center"
           initial={{ opacity: 0, scale: 0.9 }}

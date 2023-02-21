@@ -52,7 +52,7 @@ const Background = () => {
             distance: 300,
             enable: true,
             opacity: 0.5,
-            width: 0.5,
+            width: 1,
           },
           collisions: {
             enable: true,
@@ -81,7 +81,7 @@ const Background = () => {
             type: "circle",
           },
           size: {
-            value: { min: 0.5, max: 2 },
+            value: { min: 1, max: 2 },
           },
         },
         detectRetina: true,

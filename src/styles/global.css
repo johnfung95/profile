@@ -38,3 +38,7 @@ body {
     background-position: left bottom;
     transform: scale(1.1);
 }
+
+.mail:hover {
+    color: rgb(118, 208, 250);
+}

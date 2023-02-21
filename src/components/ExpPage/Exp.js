@@ -10,9 +10,7 @@ const Exp = () => {
       <Background />
       <Header />
       <ContentCard>
-        <main>
-          <ExpTimeline />
-        </main>
+        <ExpTimeline />
       </ContentCard>
     </React.Fragment>
   );
