@@ -43,7 +43,7 @@ const dummyData = [
 
 const ExpTimeline = () => {
   return (
-    <main className="flex items-center md:mt-16 h-full">
+    <div className="flex items-center md:mt-16 h-full">
       <Timeline position="alternate" sx={{ justifyContent: "center" }}>
         {dummyData.map((data) => {
           return (
@@ -75,7 +75,7 @@ const ExpTimeline = () => {
           );
         })}
       </Timeline>
-    </main>
+    </div>
   );
 };
 

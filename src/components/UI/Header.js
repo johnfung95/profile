@@ -1,13 +1,11 @@
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import Background from "./Background";
 
 const Header = () => {
   const location = useLocation();
 
   return (
     <React.Fragment>
-      <Background />
       <nav className="flex w-full absolute pt-4">
         <div className="flex-1 p-3">
           <ul className="flex items-center justify-around">

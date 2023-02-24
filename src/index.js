@@ -8,9 +8,14 @@ import Contacts from "./components/ContactsPage/Contacts";
 import Comments from "./components/CommentsPage/Comments";
 import "./styles/global.css";
 import Landing from "./components/Landing";
+import Background from "./components/UI/Background";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Landing />, errorElement: <Error /> },
+  {
+    path: "/",
+    element: <Landing />,
+    errorElement: <Error />,
+  },
   {
     path: "/me",
     element: <Aboutme />,
@@ -36,6 +41,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Background />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

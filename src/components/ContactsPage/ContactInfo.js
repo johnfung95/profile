@@ -3,7 +3,7 @@ import { SiMinutemailer } from "react-icons/si";
 
 const ContactInfo = () => {
   return (
-    <main className="w-full h-full flex flex-col-reverse content-center justify-center md:flex-row items-center justify-center">
+    <div className="w-full h-full flex flex-col-reverse content-center justify-center md:flex-row items-center justify-center">
       <section>
         <ul className="text-left text-sm md:text-lg">
           <li className="flex text-sm items-center text-ellipsis m-4 md:text-lg mb-4">
@@ -35,7 +35,7 @@ const ContactInfo = () => {
           title="address"
         ></iframe>
       </section>
-    </main>
+    </div>
   );
 };
 

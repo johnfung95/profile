@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { motion } from "framer-motion";
-import Background from "./UI/Background";
 
 const Landing = () => {
   return (
     <React.Fragment>
-      <Background />
       <div className="h-full flex flex-col items-center justify-center md:flex-row flex-nowrap  ">
         <motion.div
           className="w-full flex justify-center md:justify-end items-center"
