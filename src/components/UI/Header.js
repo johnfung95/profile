@@ -6,9 +6,9 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <nav className="flex w-full absolute pt-4">
-        <div className="flex-1 p-3">
-          <ul className="flex items-center justify-around">
+      <header>
+        <nav>
+          <ul>
             <li>
               <Link
                 to={location.pathname === "/me" ? location.pathname : "/me"}
@@ -57,8 +57,8 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </header>
     </React.Fragment>
   );
 };

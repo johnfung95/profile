@@ -1,16 +1,12 @@
 import React from "react";
 import ContentCard from "../UI/ContentCard";
-import Header from "../UI/Header";
-import Background from "../UI/Background";
 import Typewriter from "typewriter-effect";
 
 const Aboutme = () => {
   return (
     <React.Fragment>
-      {/* <Background /> */}
-      <Header />
       <ContentCard>
-        <div className="w-3/5 h-3/5 grid grid-flow-col shadow-2xl shadow-orange-900 my-8">
+        <div className="w-3/5 h-3/5 grid grid-flow-col shadow-2xl shadow-orange-900">
           <div className="text-center m-auto">
             <div className="w-full">
               <img

@@ -1,7 +1,12 @@
+import Header from "./Header";
+
 const ContentCard = (props) => {
   return (
-    <main className="h-full flex flex-col justify-center items-center mx-auto">
-      {props.children}
+    <main className="w-screen h-screen">
+      <section className="w-full h-full flex justify-center items-center">
+        <Header />
+        {props.children}
+      </section>
     </main>
   );
 };
