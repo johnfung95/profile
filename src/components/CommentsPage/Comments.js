@@ -1,6 +1,5 @@
 import React from "react";
 import ContentCard from "../UI/ContentCard";
-import Header from "../UI/Header";
 
 const Comments = () => {
   const submitHandler = (e) => {
@@ -9,7 +8,6 @@ const Comments = () => {
 
   return (
     <React.Fragment>
-      <Header />
       <ContentCard>
         <h1 className="text-3xl">Feel Free to leave me any comment~</h1>
         <div>
