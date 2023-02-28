@@ -1,47 +1,13 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./components/App";
 import ReactDOM from "react-dom/client";
-import Error from "./components/UI/Error";
-import Aboutme from "./components/AboutmePage/Aboutme";
-import Exp from "./components/ExpPage/Exp";
-import Contacts from "./components/ContactsPage/Contacts";
-import Comments from "./components/CommentsPage/Comments";
-import "./styles/global.css";
-import Landing from "./components/Landing";
 import Background from "./components/UI/Background";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Landing />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/me",
-    element: <Aboutme />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/exp",
-    element: <Exp />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/contacts",
-    element: <Contacts />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/comments",
-    element: <Comments />,
-    errorElement: <Error />,
-  },
-]);
+import "./styles/global.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Background />
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );

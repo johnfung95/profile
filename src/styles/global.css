@@ -9,23 +9,21 @@
     color: white;
 }
 
-html {
+html, body {
     height: 100%;
-    color: white;
-}
-
-body {
-    height: 100%;
-    color: white;
 }
 
 #tsparticles {
     position: absolute;
-    z-index: -1
+    z-index: -10
 }
 
 .motto {
     font-family: 'Libre Baskerville', serif;
+}
+
+.trans {
+    z-index:-9;
 }
 
 .half {

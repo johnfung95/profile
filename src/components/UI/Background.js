@@ -19,6 +19,9 @@ const Background = () => {
           color: {
             value: "#0b0f17",
           },
+          zIndex: {
+            value: -20,
+          },
         },
         fpsLimit: 60,
         interactivity: {
