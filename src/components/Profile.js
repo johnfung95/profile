@@ -39,7 +39,7 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-facebook-official"></i>
+              <i className="fa fa-facebook-official"></i>
             </a>
           </div>
           <div className="hover:cursor-pointer">
@@ -48,7 +48,7 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-instagram"></i>
+              <i className="fa fa-instagram"></i>
             </a>
           </div>
           <div className="hover:cursor-pointer">
@@ -57,14 +57,14 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa fa-github"></i>
+              <i className="fa fa-github"></i>
             </a>
           </div>
         </div>
       </div>
       <div className="w-full flex justify-evenly mb-2">
         <div className="flex gap-2 items-center hover:cursor-pointer">
-          <i class="fa fa-file-text-o" style={{ fontSize: "1.15rem" }}></i>
+          <i className="fa fa-file-text-o" style={{ fontSize: "1.15rem" }}></i>
           <p>Download CV</p>
         </div>
         <div className="hover:cursor-pointer">
@@ -75,7 +75,7 @@ const Profile = () => {
             className="flex gap-2 items-center"
           >
             <i
-              class="fa fa-linkedin-square"
+              className="fa fa-linkedin-square"
               style={{ fontSize: "1.15rem" }}
             ></i>
             <p>LinkedIn</p>
