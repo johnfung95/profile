@@ -9,7 +9,7 @@ const Menus = ({ clickPage, currentPage }) => {
   };
 
   return (
-    <header className="p-2">
+    <header className="p-2 hidden md:block">
       <nav>
         <ul>
           <li className="my-4">

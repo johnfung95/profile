@@ -12,7 +12,7 @@ const Landing = ({ enterSite }) => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center md:flex-row">
       <motion.div
-        className="w-full flex justify-center md:justify-end items-center"
+        className="w-3/5 flex justify-center md:w-full md:justify-end items-center"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -33,9 +33,9 @@ const Landing = ({ enterSite }) => {
       >
         <img src="/logo512.png" alt="pic" className="w-3/4"></img>
       </motion.div>
-      <div className="w-full pl-24 mt-8 animate-fadeIn md:mt-0">
+      <div className="w-full text-center mt-8 animate-fadeIn md:pl-24 md:mt-0 md:text-left">
         <h1 className="motto ellipsis text-5xl md:text-7xl">My Motto....</h1>
-        <div className="pl-8 mt-8">
+        <div className="mt-8 md:pl-8">
           <p>My description</p>
           <p>Demo Paragraph Many Words.................</p>
           <p>Demo Paragraph Many Words.................</p>
