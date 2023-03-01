@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import Aboutme from "./AboutmePage/Aboutme";
-import Landing from "./Landing";
-import ContentCard from "./UI/ContentCard";
+import Landing from "./UI/Landing";
+import ContentCard from "./ContentCard";
 
 const App = () => {
   const [isEnterSite, setIsEnterSite] = useState(false);
 
-  const enterSiteHandler = () => {
-    setIsEnterSite(true);
+  const enterSiteHandler = (newVal) => {
+    console.log(newVal);
+    setIsEnterSite(newVal);
   };
 
   return (
     <React.Fragment>
-      {!isEnterSite && <Landing enter={enterSiteHandler} />}
-      {isEnterSite && <ContentCard /> && <Aboutme />}
+      {!isEnterSite && <Landing enterSite={enterSiteHandler} />}
+      {isEnterSite && <ContentCard />}
     </React.Fragment>
   );
 };

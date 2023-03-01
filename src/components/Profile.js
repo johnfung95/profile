@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 
-const ProfileInfo = () => {
+const Profile = () => {
   return (
     <div className="h-full w-full mx-0 md:flex md:flex-col md:justify-center md:items-center md:max-w-md">
       <div className="h-full flex flex-col-reverse">
@@ -86,4 +86,4 @@ const ProfileInfo = () => {
   );
 };
 
-export default ProfileInfo;
+export default Profile;

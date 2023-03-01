@@ -1,6 +1,6 @@
 import React from "react";
 import ErrorPage from "../ErrorPage/ErrorPage";
-import ContentCard from "./ContentCard";
+import ContentCard from "../ContentCard";
 
 const Error = () => {
   return (

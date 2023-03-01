@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Landing = ({ enter }) => {
+const Landing = ({ enterSite }) => {
+  const buttonHandler = (e) => {
+    e.preventDefault();
+    console.log("called");
+    if (enterSite) {
+      enterSite(true);
+    }
+  };
+
   return (
     <div className="h-full w-full flex flex-col items-center justify-center md:flex-row">
       <motion.div
@@ -33,8 +41,9 @@ const Landing = ({ enter }) => {
           <p>Demo Paragraph Many Words.................</p>
           <p>Demo Paragraph Many Words.................</p>
           <button
+            type="sumbit"
             className="half rounded-2xl italic w-32 h-8 mt-8"
-            onClick={enter}
+            onClick={buttonHandler}
           >
             Enter
           </button>
