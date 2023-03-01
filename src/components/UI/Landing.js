@@ -34,11 +34,16 @@ const Landing = ({ enterSite }) => {
         <img src="/logo512.png" alt="pic" className="w-3/4"></img>
       </motion.div>
       <div className="w-full text-center mt-8 animate-fadeIn md:pl-24 md:mt-0 md:text-left">
-        <h1 className="motto ellipsis text-5xl md:text-7xl">My Motto....</h1>
+        <h1 className="motto ellipsis text-4xl md:text-6xl">
+          What doesn't kill you makes you stronger
+        </h1>
         <div className="mt-8 md:pl-8">
-          <p>My description</p>
-          <p>Demo Paragraph Many Words.................</p>
-          <p>Demo Paragraph Many Words.................</p>
+          <h1>About Me~</h1>
+          <p>Hello, my name is Fung Chun Ting. Forever 18.</p>
+          <p>
+            I am a programmer, software engineer and tech enthusiast in general.
+          </p>
+          <p>I have been coding for 3 years from now.</p>
           <button
             type="sumbit"
             className="half rounded-2xl italic w-32 h-8 mt-8"
