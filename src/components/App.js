@@ -6,7 +6,6 @@ const App = () => {
   const [isEnterSite, setIsEnterSite] = useState(false);
 
   const enterSiteHandler = (newVal) => {
-    console.log(newVal);
     setIsEnterSite(newVal);
   };
 

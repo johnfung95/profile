@@ -1,8 +1,9 @@
 import Typewriter from "typewriter-effect";
 
 const Profile = () => {
+  console.log("profile");
   return (
-    <div className="h-full w-full mx-0 md:flex md:flex-col md:justify-center md:items-center md:max-w-md">
+    <div className="h-full w-full border-r-2 border-r-zinc-800 mx-0 md:flex md:flex-col md:justify-center md:items-center md:max-w-md">
       <div className="h-full flex flex-col-reverse">
         <img
           className="w-24 h-24 mx-auto my-8 border-4 border-white-500 rounded-full contain"
@@ -39,7 +40,10 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa fa-facebook-official"></i>
+              <i
+                className="fa fa-facebook-official"
+                style={{ fontSize: "1.2rem" }}
+              ></i>
             </a>
           </div>
           <div className="hover:cursor-pointer">
@@ -48,7 +52,7 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa fa-instagram"></i>
+              <i className="fa fa-instagram" style={{ fontSize: "1.2rem" }}></i>
             </a>
           </div>
           <div className="hover:cursor-pointer">
@@ -57,17 +61,17 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa fa-github"></i>
+              <i className="fa fa-github" style={{ fontSize: "1.2rem" }}></i>
             </a>
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-evenly mb-2">
-        <div className="flex gap-2 items-center hover:cursor-pointer">
-          <i className="fa fa-file-text-o" style={{ fontSize: "1.15rem" }}></i>
+      <div className="w-full flex justify-evenly py-4 border-t-2 border-t-zinc-800">
+        <div className="flex gap-2 items-center hover:cursor-pointer hover:text-orange-300">
+          <i className="fa fa-file-text-o" style={{ fontSize: "1.2rem" }}></i>
           <p>Download CV</p>
         </div>
-        <div className="hover:cursor-pointer">
+        <div className="hover:cursor-pointer hover:text-orange-300">
           <a
             href="https://www.linkedin.com/in/chun-ting-fung-ab3610145/"
             target="_blank"
@@ -76,7 +80,7 @@ const Profile = () => {
           >
             <i
               className="fa fa-linkedin-square"
-              style={{ fontSize: "1.15rem" }}
+              style={{ fontSize: "1.2rem" }}
             ></i>
             <p>LinkedIn</p>
           </a>

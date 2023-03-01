@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 const Landing = ({ enterSite }) => {
   const buttonHandler = (e) => {
     e.preventDefault();
-    console.log("called");
     if (enterSite) {
       enterSite(true);
     }

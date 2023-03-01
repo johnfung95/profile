@@ -15,7 +15,11 @@ const Stage = ({ content }) => {
     text = <Comments />;
   }
 
-  return <div>{text}</div>;
+  return (
+    <div className="row-start-2 row-end-auto mx-4 text-md md:m-auto md:text-2xl md:row-start-auto md:col-span-2 md:mx-0 md:my-4">
+      {text}
+    </div>
+  );
 };
 
 export default Stage;
