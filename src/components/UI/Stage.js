@@ -16,7 +16,7 @@ const Stage = ({ content }) => {
   }
 
   return (
-    <div className="h-1/2 row-start-2 row-end-auto mx-4 text-md md:h-full md:m-auto md:text-2xl md:row-start-auto md:col-span-2 md:mx-0 md:my-4">
+    <div className="h-1/2 mx-4 text-md md:overflow-y-auto md:h-full md:m-auto md:text-2xl md:row-start-auto md:col-span-2 md:mx-0 md:my-2">
       {text}
     </div>
   );

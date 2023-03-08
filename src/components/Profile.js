@@ -11,7 +11,7 @@ const Profile = () => {
           alt="my logo"
         />
       </div>
-      <div className="w-full h-full flex flex-col text-center">
+      <div className="w-full flex flex-col text-center md:h-full ">
         <div className="m-2">
           <p className="text-3xl italic">John Fung</p>
         </div>

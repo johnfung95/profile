@@ -17,7 +17,7 @@ const ContentCard = ({ children }) => {
           <div className="-mr-12">
             <Menus clickPage={changePageHandler} currentPage={type} />
           </div>
-          <div className="w-full h-full grid grid-rows-2 grid-cols-1 grid-flow-row md:m-4 md:shadow-lg md:shadow-orange-300 md:w-4/5 md:h-4/5 md:grid-cols-3 md:grid-rows-1 md:grid-flow-col">
+          <div className="w-full h-full my-4 md:m-4 md:shadow-lg md:shadow-orange-300 md:w-4/5 md:h-4/5 md:grid md:grid-cols-3 md:grid-rows-1 md:grid-flow-col">
             <Profile />
             <Stage content={type} />
           </div>
