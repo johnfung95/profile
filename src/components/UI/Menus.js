@@ -9,12 +9,9 @@ const Menus = ({ clickPage, currentPage }) => {
   return (
     <header className="p-2 hidden md:block">
       <nav>
-        <ul>
-          <li className="my-4">
-            <img src="/logo192.png" alt="pic" className="w-16 h-16 m-auto" />
-          </li>
+        <ul className="md:flex md:flex-col">
           <li
-            className={`z-10 my-4 hover:text-orange-300 ${
+            className={`md:p-2 md:rounded-full md:bg-zinc-900 z-10 my-4 hover:text-orange-300 ${
               currentPage === "aboutme" ? "text-orange-300" : ""
             }`}
           >
@@ -37,7 +34,7 @@ const Menus = ({ clickPage, currentPage }) => {
             </div>
           </li>
           <li
-            className={`my-4 hover:text-orange-300 ${
+            className={`md:p-2 md:rounded-full md:bg-zinc-900 my-4 hover:text-orange-300 ${
               currentPage === "exp" ? "text-orange-300" : ""
             }`}
           >
@@ -58,7 +55,7 @@ const Menus = ({ clickPage, currentPage }) => {
             </div>
           </li>
           <li
-            className={`my-4 hover:text-orange-300 ${
+            className={`md:p-2 md:rounded-full md:bg-zinc-900 my-4 hover:text-orange-300 ${
               currentPage === "contacts" ? "text-orange-300" : ""
             }`}
           >
@@ -79,7 +76,7 @@ const Menus = ({ clickPage, currentPage }) => {
             </div>
           </li>
           <li
-            className={`my-4 hover:text-orange-300 ${
+            className={`md:p-2 md:rounded-full md:bg-zinc-900 my-4 hover:text-orange-300 ${
               currentPage === "comments" ? "text-orange-300" : ""
             }`}
           >

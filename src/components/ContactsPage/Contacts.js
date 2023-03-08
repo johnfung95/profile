@@ -32,7 +32,7 @@ const Contacts = () => {
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="w-full h-96 md: w-64 h-64"
+          className="m-auto px-8 w-full h-64 md:w-full md:h-96"
           title="address"
         ></iframe>
       </section>
