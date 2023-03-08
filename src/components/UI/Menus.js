@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Menus = ({ clickPage, currentPage }) => {
-  const [currentType, setCurrentType] = useState(currentPage);
-
   const buttonHandler = (e) => {
     console.log(e.target.dataset.name);
     clickPage(e.target.dataset.name);
@@ -28,7 +26,7 @@ const Menus = ({ clickPage, currentPage }) => {
               <i
                 className="fa fa-address-card-o"
                 style={{
-                  fontSize: "1.3rem",
+                  fontSize: "1.2rem",
                 }}
                 data-name="aboutme"
                 onClick={buttonHandler}
@@ -50,7 +48,7 @@ const Menus = ({ clickPage, currentPage }) => {
             >
               <i
                 className="fa fa-handshake-o"
-                style={{ fontSize: "1.3rem" }}
+                style={{ fontSize: "1.2rem" }}
                 data-name="exp"
                 onClick={buttonHandler}
               ></i>
@@ -71,7 +69,7 @@ const Menus = ({ clickPage, currentPage }) => {
             >
               <i
                 className="fa fa-phone-square"
-                style={{ fontSize: "1.3rem" }}
+                style={{ fontSize: "1.2rem" }}
                 data-name="contacts"
                 onClick={buttonHandler}
               ></i>
@@ -92,7 +90,7 @@ const Menus = ({ clickPage, currentPage }) => {
             >
               <i
                 className="fa fa-commenting-o menubtn"
-                style={{ fontSize: "1.3rem" }}
+                style={{ fontSize: "1.2rem" }}
                 data-name="comments"
                 onClick={buttonHandler}
               ></i>

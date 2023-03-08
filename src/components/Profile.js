@@ -69,7 +69,7 @@ const Profile = () => {
       <div className="w-full flex justify-evenly py-4 border-y-2 border-y-zinc-800">
         <div className="flex gap-2 items-center hover:cursor-pointer hover:text-orange-300">
           <i className="fa fa-file-text-o" style={{ fontSize: "1.2rem" }}></i>
-          <p>Download CV</p>
+          <p>Resume</p>
         </div>
         <div className="hover:cursor-pointer hover:text-orange-300">
           <a
