@@ -33,7 +33,7 @@ const Landing = ({ enterSite }) => {
       >
         <img src="/logo512.png" alt="pic" className="w-3/4"></img>
       </motion.div>
-      <div className="w-full text-center mt-8 animate-fadeIn md:pl-24 md:mt-0 md:text-left">
+      <div className="w-full text-center mt-8 animate-fadeIn md:px-12 md:mt-0 md:text-left">
         <h1 className="motto ellipsis text-4xl md:text-6xl">
           What doesn't kill you makes you stronger
         </h1>
