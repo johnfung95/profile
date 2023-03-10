@@ -23,7 +23,6 @@
       background: #754d6d;
     }
   }
-  
 
 #root {
     margin: 0;
@@ -47,6 +46,25 @@ html, body {
 
 .trans {
     z-index:-9;
+}
+/* target all bullets */
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    right:10px;
+    padding: 30px;
+    color: white !important;
+    fill: black !important;
+    stroke: black !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: rgb(104, 104, 108);
+  opacity: 1;
 }
 
 .customFirst::first-letter {

@@ -1,6 +1,10 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const dummyData = [
   {
@@ -22,20 +26,27 @@ const dummyData = [
 
 const QuoteCard = () => {
   return (
-    <Carousel className="w-full h-100">
-      <div>
-        <img src="assets/1.jpeg" />
-        <p className="legend">Legend 1</p>
-      </div>
-      <div>
-        <img src="assets/2.jpeg" />
-        <p className="legend">Legend 2</p>
-      </div>
-      <div>
-        <img src="assets/3.jpeg" />
-        <p className="legend">Legend 3</p>
-      </div>
-    </Carousel>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={100}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+    >
+      {dummyData.map((data) => {
+        return (
+          <SwiperSlide className="text-center pb-4 mb-12 hover:cursor-grab active:cursor-grabbing">
+            <h1 className="text-2xl my-8">{data.quote}</h1>
+            <div className="flex justify-center items-center gap-4">
+              <p>{data.person}</p>
+              <p>{data.from}</p>
+            </div>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
   );
 };
 

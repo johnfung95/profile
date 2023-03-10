@@ -6,9 +6,7 @@ const Quotes = () => {
   return (
     <React.Fragment>
       <TitleStyle title={"Quotes"} />
-      <div className="h-100">
-        <QuoteCard />
-      </div>
+      <QuoteCard />
     </React.Fragment>
   );
 };
