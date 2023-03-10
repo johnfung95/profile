@@ -49,22 +49,8 @@ html, body {
     z-index:-9;
 }
 
-.customCircle::first-letter {
+.customFirst::first-letter {
     color: #f59e0b;
-  }
-
-.customCircle::before {
-    content: "";
-    position: fixed;
-    margin-top: 0.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: linear-gradient(
-      135deg,
-      rgba(246, 184, 70, 0.4) 0%,
-      rgba(246, 184, 70, 0.01) 100%
-    );
   }
 
 .half {
@@ -75,6 +61,14 @@ html, body {
     font-weight: bold
 }
 
+.menuBtn {
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+}
+
 .half:hover {
     background-position: left bottom;
     transform: scale(1.1);
@@ -82,4 +76,8 @@ html, body {
 
 .mail:hover {
     color: rgb(118, 208, 250);
+}
+
+.menuBtn:hover {
+  transform: translate(1rem, 0)
 }

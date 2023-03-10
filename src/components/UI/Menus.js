@@ -9,10 +9,10 @@ const Menus = ({ clickPage, currentPage }) => {
   return (
     <header className="p-2 hidden md:block">
       <nav>
-        <ul className="md:flex md:flex-col">
+        <ul className="md:flex md:flex-col justify-around">
           <li
-            className={`md:p-2 md:rounded-full md:bg-zinc-900 z-10 my-4 hover:text-orange-300 ${
-              currentPage === "aboutme" ? "text-orange-300" : ""
+            className={`menuBtn md:p-2 md:rounded-r-lg md:bg-zinc-900 z-10 my-2 hover:text-orange-300 hover:menuBtn ${
+              currentPage === "aboutme" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
             <div
@@ -34,8 +34,8 @@ const Menus = ({ clickPage, currentPage }) => {
             </div>
           </li>
           <li
-            className={`md:p-2 md:rounded-full md:bg-zinc-900 my-4 hover:text-orange-300 ${
-              currentPage === "exp" ? "text-orange-300" : ""
+            className={`menuBtn md:p-2 md:rounded-r-lg md:bg-zinc-900 my-2 hover:text-orange-300 hover:menuBtn ${
+              currentPage === "exp" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
             <div
@@ -55,8 +55,8 @@ const Menus = ({ clickPage, currentPage }) => {
             </div>
           </li>
           <li
-            className={`md:p-2 md:rounded-full md:bg-zinc-900 my-4 hover:text-orange-300 ${
-              currentPage === "contacts" ? "text-orange-300" : ""
+            className={`menuBtn md:p-2 md:rounded-r-lg md:bg-zinc-900 my-2 hover:text-orange-300 hover:menuBtn ${
+              currentPage === "contacts" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
             <div
@@ -76,8 +76,8 @@ const Menus = ({ clickPage, currentPage }) => {
             </div>
           </li>
           <li
-            className={`md:p-2 md:rounded-full md:bg-zinc-900 my-4 hover:text-orange-300 ${
-              currentPage === "comments" ? "text-orange-300" : ""
+            className={`menuBtn md:p-2 md:rounded-r-lg md:bg-zinc-900 my-2 hover:text-orange-300 hover:menuBtn ${
+              currentPage === "comments" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
             <div
