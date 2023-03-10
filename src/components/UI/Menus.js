@@ -2,7 +2,6 @@ import React from "react";
 
 const Menus = ({ clickPage, currentPage }) => {
   const buttonHandler = (e) => {
-    console.log(e.target.dataset.name);
     clickPage(e.target.dataset.name);
   };
 

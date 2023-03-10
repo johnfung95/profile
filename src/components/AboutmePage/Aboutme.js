@@ -4,7 +4,6 @@ import Skills from "./Skills";
 import Hobbies from "./Hobbies";
 
 const Aboutme = () => {
-  console.log("aboutme");
   return (
     <div className="text-base mx-4 mb-2">
       <Description />

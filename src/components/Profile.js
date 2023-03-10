@@ -1,7 +1,6 @@
 import Typewriter from "typewriter-effect";
 
 const Profile = () => {
-  console.log("profile");
   return (
     <div className="h-2/5 w-full border-r-2 border-r-zinc-800 mx-0 md:h-full md:flex md:flex-col md:justify-center md:items-center md:max-w-md">
       <div className="h-full flex flex-col-reverse">

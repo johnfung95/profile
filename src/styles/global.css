@@ -61,14 +61,6 @@ html, body {
     font-weight: bold
 }
 
-.menuBtn {
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-}
-
 .half:hover {
     background-position: left bottom;
     transform: scale(1.1);
@@ -78,6 +70,23 @@ html, body {
     color: rgb(118, 208, 250);
 }
 
+.menuBtn {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+}
+
 .menuBtn:hover {
   transform: translate(1rem, 0)
+}
+
+.expCard {
+  transition: all 0.8s ease-in-out
+}
+
+.expCard:hover {
+  transform: skewY(3deg);
+  transform: scale(1.1);
 }
