@@ -44,6 +44,10 @@ html, body {
     font-family: 'Libre Baskerville', serif;
 }
 
+.quotes {
+  font-family: 'Anton', sans-serif;
+}
+
 .trans {
     z-index:-9;
 }

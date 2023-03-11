@@ -8,17 +8,17 @@ import "swiper/css/scrollbar";
 
 const dummyData = [
   {
-    quote: "He is a good boy",
+    quote: "‘ He is a good boy ’",
     person: "Anonymous A",
     from: "A Company",
   },
   {
-    quote: "A bit stupid but a honest person",
+    quote: "‘ A bit stupid but a honest person ’",
     person: "Anonymous B",
     from: "Yoho",
   },
   {
-    quote: "A shy toxic rubbish",
+    quote: "‘ A shy toxic rubbish ’",
     person: "Anonymous C",
     from: "TT",
   },
@@ -38,7 +38,7 @@ const QuoteCard = () => {
       {dummyData.map((data) => {
         return (
           <SwiperSlide className="text-center pb-4 mb-12 hover:cursor-grab active:cursor-grabbing">
-            <h1 className="text-2xl my-8">{data.quote}</h1>
+            <h1 className="quotes text-3xl my-8">{data.quote}</h1>
             <div className="flex justify-center items-center gap-4">
               <p>{data.person}</p>
               <p>{data.from}</p>

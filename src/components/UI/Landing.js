@@ -35,7 +35,7 @@ const Landing = ({ enterSite }) => {
       </motion.div>
       <div className="w-full text-center mt-8 animate-fadeIn md:px-12 md:mt-0 md:text-left">
         <h1 className="motto ellipsis text-4xl md:text-6xl">
-          What doesn't kill you makes you stronger
+          ‘What doesn't kill you makes you stronger’
         </h1>
         <div className="mt-8 md:pl-8">
           <h1>About Me~</h1>
