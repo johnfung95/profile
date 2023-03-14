@@ -10,6 +10,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { useCallback } from "react";
+import CommentCard from "./CommentCard";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -35,19 +36,16 @@ const Comments = () => {
       collection(db, "comments"),
       orderBy("creationDate", "desc")
     );
-    const arr = [];
+
     const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      console.log(doc);
-      arr.push(doc.data());
-    });
+    console.log(querySnapshot);
+    const arr = querySnapshot.docs.map((doc) => doc.data());
     setAllComments(arr);
-    // setAllComments((prevAllComments) => {});
   }, []);
 
   useEffect(() => {
     getDataFromFirestore();
-  }, []);
+  }, [getDataFromFirestore]);
 
   return (
     <div className="mb-4 text-base">
@@ -61,10 +59,11 @@ const Comments = () => {
           {allComments &&
             allComments.map((comment) => {
               return (
-                <div key={comment.id}>
-                  <p>{comment.name}</p>
-                  <p>{comment.comment}</p>
-                </div>
+                <CommentCard
+                  id={comment.id}
+                  name={comment.name}
+                  comment={comment.comment}
+                />
               );
             })}
         </div>
