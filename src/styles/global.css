@@ -112,3 +112,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   transform: skewY(3deg);
   transform: scale(1.1);
 }
+
+.warn {
+  background-color: #f3ab99;
+}
