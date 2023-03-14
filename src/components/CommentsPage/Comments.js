@@ -8,9 +8,24 @@ import {
   getFirestore,
   query,
   orderBy,
-  onSnapshot,
 } from "firebase/firestore";
 import { useCallback } from "react";
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD9tk3aoWc55urM1eMSDJE9FuGKzT7qoTY",
+  authDomain: "my-website-profile-16b19.firebaseapp.com",
+  databaseURL: "https://my-website-profile-16b19-default-rtdb.firebaseio.com",
+  projectId: "my-website-profile-16b19",
+  storageBucket: "my-website-profile-16b19.appspot.com",
+  messagingSenderId: "590234314823",
+  appId: "1:590234314823:web:06bb08d1db580625422962",
+  measurementId: "G-D7JSVVW2X8",
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
 const Comments = () => {
   const [allComments, setAllComments] = useState(null);
@@ -20,16 +35,19 @@ const Comments = () => {
       collection(db, "comments"),
       orderBy("creationDate", "desc")
     );
+    const arr = [];
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
+      console.log(doc);
       arr.push(doc.data());
     });
     setAllComments(arr);
-  }, [allComments]);
+    // setAllComments((prevAllComments) => {});
+  }, []);
 
   useEffect(() => {
     getDataFromFirestore();
-  }, [getDataFromFirestore]);
+  }, []);
 
   return (
     <div className="mb-4 text-base">
@@ -43,7 +61,7 @@ const Comments = () => {
           {allComments &&
             allComments.map((comment) => {
               return (
-                <div>
+                <div key={comment.id}>
                   <p>{comment.name}</p>
                   <p>{comment.comment}</p>
                 </div>
