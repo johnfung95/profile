@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
 import CommentCard from "./CommentCard";
+import TitleStyle from "../UI/TitleStyle";
 import { getComments } from "../../utils/firebase";
 
 const Comments = () => {
@@ -18,7 +19,7 @@ const Comments = () => {
 
   return (
     <div className="mb-4 text-base">
-      <h1 className="md:pl-4">Feel Free to leave me any comment~</h1>
+      <TitleStyle title={"Comment Section"} />
       <div>
         <div>
           <CommentForm getAllComments={getAllCommentsHandler} />

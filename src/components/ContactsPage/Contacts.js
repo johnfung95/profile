@@ -14,14 +14,26 @@ const Contacts = () => {
           <li className="flex text-sm items-center text-ellipsis m-4 md:text-lg mb-4">
             <SiMinutemailer className="mr-4 text-2xl" />
             <p>
-              <a href="mailto:johnfung95@yahoo.com" className="mail">
+              <a
+                href="mailto:johnfung95@yahoo.com"
+                target="_blank"
+                rel="noreferrer"
+                className="contact"
+              >
                 johnfung95@yahoo.com
               </a>
             </p>
           </li>
           <li className="flex text-sm items-center m-4 md:text-lg mb-4">
             <FcIphone className="mr-4 text-2xl" />
-            <p>+852 93596822</p>
+            <a
+              href="https://web.whatsapp.com/send?phone=85293596822"
+              target="_blank"
+              rel="noreferrer"
+              className="contact"
+            >
+              +852 93596822
+            </a>
           </li>
         </ul>
       </section>
