@@ -1,6 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-import { initializeApp } from "firebase/app";
-import { doc, setDoc, getFirestore } from "firebase/firestore";
 import { useRef, useState } from "react";
 import {
   uniqueNamesGenerator,
@@ -8,28 +5,7 @@ import {
   colors,
   names,
 } from "unique-names-generator";
-
-// import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyD9tk3aoWc55urM1eMSDJE9FuGKzT7qoTY",
-  authDomain: "my-website-profile-16b19.firebaseapp.com",
-  databaseURL: "https://my-website-profile-16b19-default-rtdb.firebaseio.com",
-  projectId: "my-website-profile-16b19",
-  storageBucket: "my-website-profile-16b19.appspot.com",
-  messagingSenderId: "590234314823",
-  appId: "1:590234314823:web:06bb08d1db580625422962",
-  measurementId: "G-D7JSVVW2X8",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-const db = getFirestore(app);
+import { sendComments } from "../../utils/firebase";
 
 const CommentForm = () => {
   const [isEmpty, setIsEmpty] = useState(false);
@@ -54,14 +30,7 @@ const CommentForm = () => {
       });
     }
 
-    const id = uuidv4();
-    const commentsRef = doc(db, "comments", id);
-    setDoc(commentsRef, {
-      creationDate: new Date(),
-      id: id,
-      name: nameRef.current.value,
-      comment: commentRef.current.value,
-    });
+    sendComments(nameRef.current.value.trim(), commentRef.current.value.trim());
 
     nameRef.current.value = "";
     commentRef.current.value = "";
