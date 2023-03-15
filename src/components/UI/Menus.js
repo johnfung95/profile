@@ -1,4 +1,8 @@
 import React from "react";
+import { FaAddressCard } from "react-icons/fa";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
+import { AiOutlineMessage } from "react-icons/ai";
 
 const Menus = ({ clickPage, currentPage }) => {
   const buttonHandler = (e) => {
@@ -19,14 +23,14 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="aboutme"
               onClick={buttonHandler}
             >
-              <i
-                className="fa fa-address-card-o"
+              <FaAddressCard
                 style={{
-                  fontSize: "1.2rem",
+                  margin: "auto",
+                  fontSize: "1.3rem",
                 }}
                 data-name="aboutme"
                 onClick={buttonHandler}
-              ></i>
+              ></FaAddressCard>
               <p data-name="aboutme" onClick={buttonHandler}>
                 About Me
               </p>
@@ -42,14 +46,13 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="exp"
               onClick={buttonHandler}
             >
-              <i
-                className="fa fa-handshake-o"
-                style={{ fontSize: "1.2rem" }}
+              <MdOutlineWorkOutline
+                style={{ margin: "auto", fontSize: "1.3rem" }}
                 data-name="exp"
                 onClick={buttonHandler}
-              ></i>
+              ></MdOutlineWorkOutline>
               <p data-name="exp" onClick={buttonHandler}>
-                Exp
+                Experience
               </p>
             </div>
           </li>
@@ -63,12 +66,11 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="contacts"
               onClick={buttonHandler}
             >
-              <i
-                className="fa fa-phone-square"
-                style={{ fontSize: "1.2rem" }}
+              <FiPhone
+                style={{ margin: "auto", fontSize: "1.3rem" }}
                 data-name="contacts"
                 onClick={buttonHandler}
-              ></i>
+              ></FiPhone>
               <p data-name="contacts" onClick={buttonHandler}>
                 Contacts
               </p>
@@ -84,12 +86,11 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="comments"
               onClick={buttonHandler}
             >
-              <i
-                className="fa fa-commenting-o menubtn"
-                style={{ fontSize: "1.2rem" }}
+              <AiOutlineMessage
+                style={{ margin: "auto", fontSize: "1.3rem" }}
                 data-name="comments"
                 onClick={buttonHandler}
-              ></i>
+              ></AiOutlineMessage>
               <p data-name="comments" onClick={buttonHandler}>
                 Comments
               </p>
