@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CommentForm from "./CommentForm";
-import CommentCard from "./CommentCard";
 import TitleStyle from "../UI/TitleStyle";
-import { fetchInitialRecords, fetchMoreRecords } from "../../utils/firebase";
-import InfiniteScroll from "react-infinite-scroll-component";
 import CommentList from "./CommentList";
 
 const Comments = () => {

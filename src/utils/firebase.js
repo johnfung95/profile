@@ -53,14 +53,6 @@ export const sendComments = (name, comment) => {
   });
 };
 
-export const getAllComments = async () => {
-  const q = query(collection(db, "comments"), orderBy("unixTime", "desc"));
-
-  const querySnapshot = await getDocs(q);
-  const arr = querySnapshot.docs.map((doc) => doc.data());
-  return arr;
-};
-
 export const fetchInitialRecords = async () => {
   const q = query(
     collection(db, "comments"),

@@ -5,7 +5,7 @@ import {
   colors,
   names,
 } from "unique-names-generator";
-import { sendComments, getAllComments } from "../../utils/firebase";
+import { sendComments } from "../../utils/firebase";
 
 const CommentForm = () => {
   const [isEmpty, setIsEmpty] = useState(false);
@@ -31,7 +31,6 @@ const CommentForm = () => {
     }
 
     sendComments(nameRef.current.value.trim(), commentRef.current.value.trim());
-    // const newData = await getAllComments();
 
     nameRef.current.value = "";
     commentRef.current.value = "";

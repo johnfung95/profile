@@ -1,4 +1,11 @@
 import Typewriter from "typewriter-effect";
+import { BiBook } from "react-icons/bi";
+import {
+  AiOutlineInstagram,
+  AiOutlineFacebook,
+  AiOutlineLinkedin,
+  AiOutlineGithub,
+} from "react-icons/ai";
 
 const Profile = () => {
   return (
@@ -33,41 +40,42 @@ const Profile = () => {
           />
         </div>
         <div className="flex my-2 gap-5 justify-center">
-          <div className="hover:cursor-pointer">
+          <div className="hover:cursor-pointer hover:text-orange-300">
             <a
               href="https://www.facebook.com/chunting.fung.5/"
               target="_blank"
               rel="noreferrer"
             >
-              <i
-                className="fa fa-facebook-official"
-                style={{ fontSize: "1.2rem" }}
-              ></i>
+              <AiOutlineFacebook
+                style={{ fontSize: "1.3rem" }}
+              ></AiOutlineFacebook>
             </a>
           </div>
-          <div className="hover:cursor-pointer">
+          <div className="hover:cursor-pointer hover:text-orange-300">
             <a
               href="https://www.instagram.com/chuntingfung/"
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa fa-instagram" style={{ fontSize: "1.2rem" }}></i>
+              <AiOutlineInstagram
+                style={{ fontSize: "1.3rem" }}
+              ></AiOutlineInstagram>
             </a>
           </div>
-          <div className="hover:cursor-pointer">
+          <div className="hover:cursor-pointer hover:text-orange-300">
             <a
               href="https://github.com/johnfung95"
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa fa-github" style={{ fontSize: "1.2rem" }}></i>
+              <AiOutlineGithub style={{ fontSize: "1.3rem" }}></AiOutlineGithub>
             </a>
           </div>
         </div>
       </div>
       <div className="w-full flex justify-evenly py-4 border-y-2 border-y-zinc-800">
         <div className="flex gap-2 items-center hover:cursor-pointer hover:text-orange-300">
-          <i className="fa fa-file-text-o" style={{ fontSize: "1.2rem" }}></i>
+          <BiBook style={{ margin: "auto", fontSize: "1.3rem" }}></BiBook>
           <p>Resume</p>
         </div>
         <div className="hover:cursor-pointer hover:text-orange-300">
@@ -77,10 +85,9 @@ const Profile = () => {
             rel="noreferrer"
             className="flex gap-2 items-center"
           >
-            <i
-              className="fa fa-linkedin-square"
-              style={{ fontSize: "1.2rem" }}
-            ></i>
+            <AiOutlineLinkedin
+              style={{ margin: "auto", fontSize: "1.3rem" }}
+            ></AiOutlineLinkedin>
             <p>LinkedIn</p>
           </a>
         </div>
