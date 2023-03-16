@@ -4,70 +4,15 @@ import CommentCard from "./CommentCard";
 import TitleStyle from "../UI/TitleStyle";
 import { fetchInitialRecords, fetchMoreRecords } from "../../utils/firebase";
 import InfiniteScroll from "react-infinite-scroll-component";
+import CommentList from "./CommentList";
 
 const Comments = () => {
-  const [comments, setComments] = useState(null);
-  const [lastDocKey, setLastDocKey] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    fetchFirstBatchComments();
-  }, []);
-
-  const fetchFirstBatchComments = async () => {
-    const { arr, lastKey } = await fetchInitialRecords();
-    setComments(arr);
-    setLastDocKey(lastKey);
-  };
-
-  const fetchMoreComments = () => {
-    if (lastDocKey > 0) {
-      setIsLoading(true);
-      setTimeout(async () => {
-        const { arr, newLastKey } = await fetchMoreRecords(lastDocKey);
-        console.log(arr, newLastKey);
-        setComments(comments.concat(arr));
-        setLastDocKey(newLastKey);
-        setIsLoading(false);
-      }, 1000);
-    }
-  };
-
-  const getCommentsHandler = (newComments) => {
-    setComments(newComments);
-  };
-
   return (
     <div className="mb-4 text-base">
       <TitleStyle title={"Comment Section"} />
-      <div>
-        <div>
-          <CommentForm getComments={getCommentsHandler} />
-        </div>
-        {comments && (
-          <InfiniteScroll
-            className="overflow-auto"
-            dataLength={comments.length}
-            next={fetchMoreComments}
-            loader={isLoading && <div>Loading...</div>}
-            endMessage={"No more."}
-            hasMore={true}
-            scrollableTarget="stage"
-          >
-            {comments.map((comment) => {
-              return (
-                <CommentCard
-                  key={comment.id}
-                  avatar={comment.avatar}
-                  name={comment.name}
-                  comment={comment.comment}
-                  createdAt={comment.creationDate.toString()}
-                />
-              );
-            })}
-          </InfiniteScroll>
-        )}
-      </div>
+      <CommentForm />
+      <div className="border-b-2 border-y-zinc-800"></div>
+      <CommentList />
     </div>
   );
 };
