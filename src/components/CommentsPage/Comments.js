@@ -2,19 +2,35 @@ import React, { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
 import CommentCard from "./CommentCard";
 import TitleStyle from "../UI/TitleStyle";
-import { getComments } from "../../utils/firebase";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchEightRecords, fetchMoreRecords } from "../../utils/firebase";
 
 const Comments = () => {
-  const [allComments, setAllComments] = useState(null);
+  const [comments, setComments] = useState(null);
+  const [lastDocKey, setLastDocKey] = useState(null);
 
-  const getAllCommentsHandler = (newComments) => {
-    setAllComments(newComments);
+  const getCommentsHandler = (newComments) => {
+    setComments(newComments);
+  };
+
+  const fetchMoreComments = async () => {
+    console.log(lastDocKey);
+    if (lastDocKey.length > 0) {
+      const { arr, newLastKey } = await fetchMoreRecords(lastDocKey);
+      console.log(arr, newLastKey);
+      setComments(comments.concat(arr));
+      setLastDocKey(newLastKey);
+    }
+  };
+
+  const fetchFirstBatchComments = async () => {
+    const { arr, lastKey } = await fetchEightRecords();
+    setComments(arr);
+    setLastDocKey(lastKey);
   };
 
   useEffect(() => {
-    getComments().then((data) => {
-      setAllComments(data);
-    });
+    fetchFirstBatchComments();
   }, []);
 
   return (
@@ -22,21 +38,33 @@ const Comments = () => {
       <TitleStyle title={"Comment Section"} />
       <div>
         <div>
-          <CommentForm getAllComments={getAllCommentsHandler} />
+          <CommentForm getComments={getCommentsHandler} />
         </div>
-        <div className="mb-4 md:pl-4">
-          {allComments &&
-            allComments.map((comment) => {
-              return (
+        {comments && (
+          <InfiniteScroll
+            className="mb-4 md:pl-4"
+            dataLength={comments.length}
+            next={async () => {
+              const { arr, newLastKey } = await fetchMoreRecords(lastDocKey);
+              console.log(arr, newLastKey);
+              setComments(comments.concat(arr));
+              setLastDocKey(newLastKey);
+            }}
+            hasMore={true}
+            loader={<p>Loading...</p>}
+          >
+            {comments.length > 0 &&
+              comments.map((comment) => (
                 <CommentCard
-                  id={comment.id}
+                  key={comment.id}
+                  avatar={comment.avatar}
                   name={comment.name}
                   comment={comment.comment}
                   createdAt={comment.creationDate.toString()}
                 />
-              );
-            })}
-        </div>
+              ))}
+          </InfiniteScroll>
+        )}
       </div>
     </div>
   );

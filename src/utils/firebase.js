@@ -8,6 +8,8 @@ import {
   doc,
   setDoc,
   getFirestore,
+  limit,
+  startAfter,
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -30,6 +32,9 @@ const db = getFirestore(app);
 
 export const sendComments = (name, comment) => {
   const id = uuidv4();
+  const avatar = `https://api.dicebear.com/5.x/personas/svg?seed=${Math.floor(
+    Math.random() * 10000
+  )}`;
   const commentsRef = doc(db, "comments", id);
   setDoc(commentsRef, {
     creationDate: new Date().toLocaleString("en-US", {
@@ -43,14 +48,50 @@ export const sendComments = (name, comment) => {
     id: id,
     name: name,
     comment: comment,
+    avatar: avatar,
+    unixTime: Date.now(),
   });
 };
 
-export const getComments = async () => {
-  const q = query(collection(db, "comments"), orderBy("creationDate", "desc"));
+export const getAllComments = async () => {
+  const q = query(collection(db, "comments"), orderBy("unixTime", "desc"));
 
   const querySnapshot = await getDocs(q);
-  console.log(querySnapshot);
   const arr = querySnapshot.docs.map((doc) => doc.data());
   return arr;
+};
+
+export const fetchEightRecords = async () => {
+  const q = query(
+    collection(db, "comments"),
+    orderBy("unixTime", "desc"),
+    limit(8)
+  );
+
+  const arr = [];
+  let lastKey = "";
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    arr.push(doc.data());
+    lastKey = doc.data().unixTime;
+  });
+  return { arr, lastKey };
+};
+
+export const fetchMoreRecords = async (lastKey) => {
+  const q = query(
+    collection(db, "comments"),
+    orderBy("unixTime", "desc"),
+    limit(8),
+    startAfter(lastKey)
+  );
+
+  const arr = [];
+  let newLastKey = "";
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    arr.push(doc.data());
+    newLastKey = doc.data().unixTime;
+    return { arr, newLastKey };
+  });
 };
