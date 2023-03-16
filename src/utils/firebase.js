@@ -61,11 +61,11 @@ export const getAllComments = async () => {
   return arr;
 };
 
-export const fetchEightRecords = async () => {
+export const fetchInitialRecords = async () => {
   const q = query(
     collection(db, "comments"),
     orderBy("unixTime", "desc"),
-    limit(8)
+    limit(6)
   );
 
   const arr = [];
@@ -82,7 +82,7 @@ export const fetchMoreRecords = async (lastKey) => {
   const q = query(
     collection(db, "comments"),
     orderBy("unixTime", "desc"),
-    limit(8),
+    limit(6),
     startAfter(lastKey)
   );
 
@@ -92,6 +92,6 @@ export const fetchMoreRecords = async (lastKey) => {
   querySnapshot.forEach((doc) => {
     arr.push(doc.data());
     newLastKey = doc.data().unixTime;
-    return { arr, newLastKey };
   });
+  return { arr, newLastKey };
 };

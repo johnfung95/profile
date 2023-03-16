@@ -16,7 +16,10 @@ const Stage = ({ content }) => {
   }
 
   return (
-    <div className="h-1/2  text-base md:p-2 md:scrollbar md:overflow-y-auto md:h-full md:m-auto md:row-start-auto md:col-span-2 md:mx-0">
+    <div
+      id="stage"
+      className="h-1/2  text-base md:p-2 md:scrollbar md:overflow-y-auto md:h-full md:m-auto md:row-start-auto md:col-span-2 md:mx-0"
+    >
       {text}
     </div>
   );
