@@ -23,14 +23,15 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="aboutme"
               onClick={buttonHandler}
             >
-              <FaAddressCard
-                style={{
-                  margin: "auto",
-                  fontSize: "1.3rem",
-                }}
-                data-name="aboutme"
-                onClick={buttonHandler}
-              ></FaAddressCard>
+              <div onClick={buttonHandler} data-name="aboutme">
+                <FaAddressCard
+                  style={{
+                    margin: "auto",
+                    fontSize: "1.3rem",
+                  }}
+                ></FaAddressCard>
+              </div>
+
               <p data-name="aboutme" onClick={buttonHandler}>
                 About Me
               </p>
@@ -46,11 +47,11 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="exp"
               onClick={buttonHandler}
             >
-              <MdOutlineWorkOutline
-                style={{ margin: "auto", fontSize: "1.3rem" }}
-                data-name="exp"
-                onClick={buttonHandler}
-              ></MdOutlineWorkOutline>
+              <div onClick={buttonHandler} data-name="exp">
+                <MdOutlineWorkOutline
+                  style={{ margin: "auto", fontSize: "1.3rem" }}
+                ></MdOutlineWorkOutline>
+              </div>
               <p data-name="exp" onClick={buttonHandler}>
                 Experience
               </p>
@@ -66,11 +67,11 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="contacts"
               onClick={buttonHandler}
             >
-              <FiPhone
-                style={{ margin: "auto", fontSize: "1.3rem" }}
-                data-name="contacts"
-                onClick={buttonHandler}
-              ></FiPhone>
+              <div onClick={buttonHandler} data-name="contacts">
+                <FiPhone
+                  style={{ margin: "auto", fontSize: "1.3rem" }}
+                ></FiPhone>
+              </div>
               <p data-name="contacts" onClick={buttonHandler}>
                 Contacts
               </p>
@@ -86,11 +87,11 @@ const Menus = ({ clickPage, currentPage }) => {
               data-name="comments"
               onClick={buttonHandler}
             >
-              <AiOutlineMessage
-                style={{ margin: "auto", fontSize: "1.3rem" }}
-                data-name="comments"
-                onClick={buttonHandler}
-              ></AiOutlineMessage>
+              <div onClick={buttonHandler} data-name="comments">
+                <AiOutlineMessage
+                  style={{ margin: "auto", fontSize: "1.3rem" }}
+                ></AiOutlineMessage>
+              </div>
               <p data-name="comments" onClick={buttonHandler}>
                 Comments
               </p>

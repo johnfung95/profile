@@ -1,14 +1,15 @@
 import React from "react";
 import Quotes from "./Quotes";
 import Work from "./Work";
+import SlideAnimate from "../UI/SlideAnimate";
 
 const Exp = () => {
   return (
-    <div className="relative">
+    <SlideAnimate>
       <Work />
       <div className="border-b-2 border-y-zinc-800"></div>
       <Quotes />
-    </div>
+    </SlideAnimate>
   );
 };
 
