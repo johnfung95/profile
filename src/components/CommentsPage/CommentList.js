@@ -1,54 +1,60 @@
 import React, { useState, useEffect } from "react";
 import CommentCard from "./CommentCard";
-import { fetchInitialRecords, fetchMoreRecords } from "../../utils/firebase";
+import { fetchMoreRecords } from "../../utils/firebase";
+import { motion } from "framer-motion";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-const CommentList = () => {
-  const [comments, setComments] = useState(null);
-  const [lastDocKey, setLastDocKey] = useState(null);
+const CommentList = ({ firstComments, lastKey }) => {
+  const [lastDocKey, setLastDocKey] = useState(0);
+  const [moreComments, setMoreComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    fetchFirstBatchComments();
-  }, []);
 
-  const fetchFirstBatchComments = async () => {
-    const { arr, lastKey } = await fetchInitialRecords();
-    setComments(arr);
-    setLastDocKey(lastKey);
-  };
+  useEffect(() => {
+    if (firstComments) {
+      setMoreComments(firstComments);
+      setLastDocKey(lastKey);
+    }
+  }, [firstComments, lastKey]);
+
   const fetchMoreComments = () => {
     if (lastDocKey > 0) {
       setIsLoading(true);
       setTimeout(async () => {
         const { arr, newLastKey } = await fetchMoreRecords(lastDocKey);
-        console.log(arr, newLastKey);
-        setComments(comments.concat(arr));
+        setMoreComments(moreComments.concat(arr));
         setLastDocKey(newLastKey);
         setIsLoading(false);
       }, 1000);
     }
   };
 
-  if (comments) {
+  if (moreComments) {
     return (
       <InfiniteScroll
         className="overflow-auto"
-        dataLength={comments.length}
+        dataLength={moreComments.length}
         next={fetchMoreComments}
         loader={isLoading && <div>Loading...</div>}
         endMessage={"No more."}
         hasMore={true}
         scrollableTarget="stage"
       >
-        {comments.map((comment) => {
+        {moreComments.map((comment) => {
           return (
-            <CommentCard
+            <motion.div
               key={comment.id}
-              avatar={comment.avatar}
-              name={comment.name}
-              comment={comment.comment}
-              createdAt={comment.creationDate.toString()}
-            />
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 10 }}
+            >
+              <CommentCard
+                id={comment.id}
+                avatar={comment.avatar}
+                name={comment.name}
+                comment={comment.comment}
+                createdAt={comment.creationDate.toString()}
+              />
+            </motion.div>
           );
         })}
       </InfiniteScroll>

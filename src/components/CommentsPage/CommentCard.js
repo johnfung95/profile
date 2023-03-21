@@ -1,13 +1,6 @@
-import { motion } from "framer-motion";
-
-const CommentCard = ({ avatar, name, comment, createdAt }) => {
+const CommentCard = ({ id, avatar, name, comment, createdAt }) => {
   return (
-    <motion.div
-      className="flex my-4 w-full"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="flex my-4 w-full" key={id}>
       <div className="w-12 h-12 mr-2">
         <img src={avatar} alt={name} />
       </div>
@@ -18,7 +11,7 @@ const CommentCard = ({ avatar, name, comment, createdAt }) => {
         </div>
         <p className="text-base">{comment}</p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

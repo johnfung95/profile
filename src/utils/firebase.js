@@ -36,7 +36,7 @@ export const sendComments = (name, comment) => {
     Math.random() * 10000
   )}`;
   const commentsRef = doc(db, "comments", id);
-  setDoc(commentsRef, {
+  const newComment = {
     creationDate: new Date().toLocaleString("en-US", {
       hour: "numeric",
       minute: "numeric",
@@ -50,7 +50,10 @@ export const sendComments = (name, comment) => {
     comment: comment,
     avatar: avatar,
     unixTime: Date.now(),
-  });
+  };
+  setDoc(commentsRef, newComment);
+
+  return newComment;
 };
 
 export const fetchInitialRecords = async () => {

@@ -7,7 +7,7 @@ import {
 } from "unique-names-generator";
 import { sendComments } from "../../utils/firebase";
 
-const CommentForm = () => {
+const CommentForm = ({ updateLastComment }) => {
   const [isEmpty, setIsEmpty] = useState(false);
   let nameRef = useRef();
   let commentRef = useRef();
@@ -30,7 +30,11 @@ const CommentForm = () => {
       });
     }
 
-    sendComments(nameRef.current.value.trim(), commentRef.current.value.trim());
+    const lastComment = await sendComments(
+      nameRef.current.value.trim(),
+      commentRef.current.value.trim()
+    );
+    updateLastComment(lastComment);
 
     nameRef.current.value = "";
     commentRef.current.value = "";
