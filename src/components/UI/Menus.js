@@ -18,20 +18,16 @@ const Menus = ({ clickPage, currentPage }) => {
               currentPage === "aboutme" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
-            <div
-              className="text-center hover:cursor-pointer"
-              data-name="aboutme"
-              onClick={buttonHandler}
-            >
-              <div onClick={buttonHandler} data-name="aboutme">
-                <FaAddressCard
-                  style={{
-                    margin: "auto",
-                    fontSize: "1.3rem",
-                  }}
-                ></FaAddressCard>
-              </div>
-
+            <div className="text-center hover:cursor-pointer">
+              <FaAddressCard
+                onClick={buttonHandler}
+                data-name="aboutme"
+                style={{
+                  width: "100%",
+                  margin: "auto",
+                  fontSize: "1.3rem",
+                }}
+              ></FaAddressCard>
               <p data-name="aboutme" onClick={buttonHandler}>
                 About Me
               </p>
@@ -42,16 +38,12 @@ const Menus = ({ clickPage, currentPage }) => {
               currentPage === "exp" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
-            <div
-              className="text-center hover:cursor-pointer"
-              data-name="exp"
-              onClick={buttonHandler}
-            >
-              <div onClick={buttonHandler} data-name="exp">
-                <MdOutlineWorkOutline
-                  style={{ margin: "auto", fontSize: "1.3rem" }}
-                ></MdOutlineWorkOutline>
-              </div>
+            <div className="text-center hover:cursor-pointer">
+              <MdOutlineWorkOutline
+                onClick={buttonHandler}
+                data-name="exp"
+                style={{ width: "100%", margin: "auto", fontSize: "1.3rem" }}
+              ></MdOutlineWorkOutline>
               <p data-name="exp" onClick={buttonHandler}>
                 Experience
               </p>
@@ -62,16 +54,13 @@ const Menus = ({ clickPage, currentPage }) => {
               currentPage === "contacts" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
-            <div
-              className="text-center hover:cursor-pointer"
-              data-name="contacts"
-              onClick={buttonHandler}
-            >
-              <div onClick={buttonHandler} data-name="contacts">
-                <FiPhone
-                  style={{ margin: "auto", fontSize: "1.3rem" }}
-                ></FiPhone>
-              </div>
+            <div className="text-center hover:cursor-pointer">
+              <FiPhone
+                onClick={buttonHandler}
+                data-name="contacts"
+                style={{ width: "100%", margin: "auto", fontSize: "1.3rem" }}
+              ></FiPhone>
+
               <p data-name="contacts" onClick={buttonHandler}>
                 Contacts
               </p>
@@ -82,17 +71,17 @@ const Menus = ({ clickPage, currentPage }) => {
               currentPage === "comments" ? "text-orange-300 translate-x-3" : ""
             }`}
           >
-            <div
-              className="text-center hover:cursor-pointer"
-              data-name="comments"
-              onClick={buttonHandler}
-            >
-              <div onClick={buttonHandler} data-name="comments">
-                <AiOutlineMessage
-                  style={{ margin: "auto", fontSize: "1.3rem" }}
-                ></AiOutlineMessage>
-              </div>
-              <p data-name="comments" onClick={buttonHandler}>
+            <div className="text-center hover:cursor-pointer">
+              <AiOutlineMessage
+                onClick={buttonHandler}
+                data-name="comments"
+                style={{ width: "100%", margin: "auto", fontSize: "1.3rem" }}
+              ></AiOutlineMessage>
+              <p
+                className={{ width: "100%" }}
+                data-name="comments"
+                onClick={buttonHandler}
+              >
                 Comments
               </p>
             </div>

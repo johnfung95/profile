@@ -28,10 +28,10 @@ const CommentList = ({ firstComments, lastKey }) => {
     }
   };
 
-  if (moreComments) {
+  if (moreComments && moreComments.length > 0) {
     return (
       <InfiniteScroll
-        className="overflow-auto"
+        className="scrollbar"
         dataLength={moreComments.length}
         next={fetchMoreComments}
         loader={isLoading && <div>Loading...</div>}
@@ -45,7 +45,10 @@ const CommentList = ({ firstComments, lastKey }) => {
               key={comment.id}
               initial={{ x: 300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "spring", stiffness: 10 }}
+              transition={{
+                type: "tween",
+                duration: 1.5,
+              }}
             >
               <CommentCard
                 id={comment.id}
@@ -59,6 +62,8 @@ const CommentList = ({ firstComments, lastKey }) => {
         })}
       </InfiniteScroll>
     );
+  } else {
+    return <p>Be the First one to leave me a comment~</p>;
   }
 };
 

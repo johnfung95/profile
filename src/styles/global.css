@@ -116,3 +116,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .warn {
   background-color: #f3ab99;
 }
+
+.min-avatar-width {
+  min-width: 3rem
+}
