@@ -74,10 +74,15 @@ const Profile = () => {
         </div>
       </div>
       <div className="w-full flex justify-evenly py-4 border-y-2 border-y-zinc-800">
-        <div className="flex gap-2 items-center hover:cursor-pointer hover:text-orange-300">
+        <a
+          href={process.env.REACT_APP_RESUME_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="flex gap-2 items-center hover:cursor-pointer hover:text-orange-300"
+        >
           <BiBook style={{ margin: "auto", fontSize: "1.3rem" }}></BiBook>
           <p>Resume</p>
-        </div>
+        </a>
         <div className="hover:cursor-pointer hover:text-orange-300">
           <a
             href="https://www.linkedin.com/in/chun-ting-fung-ab3610145/"
