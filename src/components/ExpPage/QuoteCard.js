@@ -37,10 +37,12 @@ const QuoteCard = () => {
     >
       {dummyData.map((data) => {
         return (
-          <SwiperSlide className="text-center pb-4 mb-12 hover:cursor-grab active:cursor-grabbing">
+          <SwiperSlide
+            key={data.from}
+            className="text-center pb-4 mb-12 hover:cursor-grab active:cursor-grabbing"
+          >
             <h1 className="quotes text-3xl my-8">{data.quote}</h1>
-            <div className="flex justify-center items-center gap-4">
-              <p>{data.person}</p>
+            <div className="text-center">
               <p>{data.from}</p>
             </div>
           </SwiperSlide>

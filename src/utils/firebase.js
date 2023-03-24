@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { initializeApp } from "firebase/app";
 import {
+  getDoc,
   getDocs,
   collection,
   query,
@@ -89,4 +90,11 @@ export const fetchMoreRecords = async (lastKey) => {
     newLastKey = doc.data().unixTime;
   });
   return { arr, newLastKey };
+};
+
+export const fetchWorkRecords = async () => {
+  const ref = doc(db, "exp", "all");
+  const docSnap = await getDoc(ref);
+  const workData = docSnap.data();
+  return workData["work"];
 };
