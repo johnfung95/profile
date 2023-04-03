@@ -12,7 +12,7 @@ const Profile = () => {
     <div className="h-2/5 w-full border-r-2 border-r-zinc-800 mx-0 md:h-full md:flex md:flex-col md:justify-center md:items-center md:max-w-md">
       <div className="h-full flex flex-col-reverse">
         <img
-          className="w-44 h-44 bg-slate-700 mx-auto border-none rounded-full contain md:my-8"
+          className="w-44 h-44 bg-slate-900 mx-auto border-none rounded-full contain enlarge md:my-8"
           src="/profile-pic.png"
           alt="my logo"
         />

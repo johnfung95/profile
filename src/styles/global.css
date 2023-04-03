@@ -120,3 +120,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .min-avatar-width {
   min-width: 3rem
 }
+
+@media screen and (min-width: 768px) {
+  .enlarge {
+    transition: all 0.8s ease-in-out
+  }
+  
+  .enlarge:hover {
+    transform: scale(1.35);
+  }  
+}
