@@ -12,7 +12,7 @@ const Landing = ({ enterSite }) => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center md:flex-row">
       <motion.div
-        className="w-3/5 flex justify-center md:w-full md:justify-end items-center"
+        className="w-3/5 flex justify-center md:w-full md:justify-center items-center"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -31,16 +31,18 @@ const Landing = ({ enterSite }) => {
           },
         }}
       >
-        <img src="/logo512.png" alt="pic" className="w-3/4"></img>
+        <img src="/logo512.png" alt="pic" className="w-4/6"></img>
       </motion.div>
-      <div className="w-full text-center mt-8 animate-fadeIn md:px-12 md:mt-0 md:text-left">
+      <div className="w-full text-center mt-8 animate-fadeIn md:pr-12 md:mt-0 md:text-left">
         <h1 className="motto ellipsis text-4xl md:text-6xl">
           ‘What doesn't kill you makes you stronger’
         </h1>
         <div className="mt-8 md:pl-8">
-          <p className="pb-2">Hello, my name is Fung Chun Ting. Forever 18.</p>
           <p className="pb-2">
-            A programmer, software engineer and tech enthusiast in general.
+            Hello, people call me John Chick. I don't know why ...
+          </p>
+          <p className="pb-2">
+            A programmer, software engineer and tech enthusiast.
           </p>
           <p className="pb-2">
             I am fond of coding and keen on problem-solving.
