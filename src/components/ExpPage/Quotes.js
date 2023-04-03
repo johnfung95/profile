@@ -5,7 +5,7 @@ import QuoteCard from "./QuoteCard";
 const Quotes = () => {
   return (
     <React.Fragment>
-      <TitleStyle title={"Quotes"} />
+      <TitleStyle title={"Favorite Quotes"} />
       <QuoteCard />
     </React.Fragment>
   );

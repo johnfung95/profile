@@ -9,7 +9,6 @@ const Work = () => {
   useEffect(() => {
     const getRecs = async () => {
       const data = await fetchWorkRecords();
-      console.log(data.img);
       setExpData(data);
     };
 

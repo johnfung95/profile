@@ -98,3 +98,10 @@ export const fetchWorkRecords = async () => {
   const workData = docSnap.data();
   return workData["work"];
 };
+
+export const fetchSkillsRecords = async () => {
+  const ref = doc(db, "skills", "sets");
+  const docSnap = await getDoc(ref);
+  const skillsData = docSnap.data();
+  return skillsData["all"];
+};

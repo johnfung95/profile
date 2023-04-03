@@ -38,12 +38,13 @@ const Landing = ({ enterSite }) => {
           ‘What doesn't kill you makes you stronger’
         </h1>
         <div className="mt-8 md:pl-8">
-          <h1>About Me~</h1>
-          <p>Hello, my name is Fung Chun Ting. Forever 18.</p>
-          <p>
-            I am a programmer, software engineer and tech enthusiast in general.
+          <p className="pb-2">Hello, my name is Fung Chun Ting. Forever 18.</p>
+          <p className="pb-2">
+            A programmer, software engineer and tech enthusiast in general.
           </p>
-          <p>I have been coding for 3 years from now.</p>
+          <p className="pb-2">
+            I am fond of coding and keen on problem-solving.
+          </p>
           <button
             type="sumbit"
             className="half rounded-2xl italic w-32 h-8 mt-8"
