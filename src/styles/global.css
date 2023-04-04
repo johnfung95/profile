@@ -25,10 +25,11 @@
   }
 
 #root {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
 }
 
 html, body {
@@ -104,15 +105,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   transform: translate(1rem, 0)
 }
 
-.expCard {
-  transition: all 0.8s ease-in-out
-}
-
-.expCard:hover {
-  transform: skewY(3deg);
-  transform: scale(1.1);
-}
-
 .warn {
   background-color: #f3ab99;
 }
@@ -128,5 +120,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   
   .enlarge:hover {
     transform: scale(1.35);
-  }  
+  }
+
+  .expCard {
+    transition: all 0.8s ease-in-out
+  }
+  
+  .expCard:hover {
+    transform: skewY(3deg);
+    transform: scale(1.2);
+  }
 }
