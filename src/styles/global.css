@@ -113,6 +113,22 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   min-width: 3rem
 }
 
+.menuBarContainer {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: fixed;
+  background-color: orange;
+  border-radius: 100%;
+}
+
+.menuBar {
+  width: 0.9rem;
+  height: 0.15rem;
+  background-color: white;
+  margin: 0.25rem;
+}
+
 @media screen and (min-width: 768px) {
   .enlarge {
     transition: all 0.8s ease-in-out

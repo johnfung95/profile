@@ -1,17 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaAddressCard } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { AiOutlineMessage } from "react-icons/ai";
+import Modal from "./Modal";
 
 const Menus = ({ clickPage, currentPage }) => {
+  const [openModal, setOpenModal] = useState(false);
+
   const buttonHandler = (e) => {
     clickPage(e.target.dataset.name);
   };
 
+  const openModalHandler = () => {
+    setOpenModal(true);
+  };
+
+  const closeModalHandler = () => {
+    setOpenModal(false);
+  };
+
   return (
     <header className="p-2">
-      <nav className="">
+      <nav>
+        <div
+          className="menuBarContainer cursor-pointer md:hidden"
+          onClick={openModalHandler}
+        >
+          <div className="menuBar"></div>
+          <div className="menuBar"></div>
+          <div className="menuBar"></div>
+        </div>
+        {openModal && (
+          <Modal
+            clickPage={clickPage}
+            currentPage={currentPage}
+            closeModal={closeModalHandler}
+          />
+        )}
         <ul className="hidden md:block md:flex md:flex-col md:justify-around">
           <li
             className={`menuBtn md:p-2 md:rounded-r-lg md:bg-zinc-900 z-10 my-2 hover:text-orange-300 hover:menuBtn ${
