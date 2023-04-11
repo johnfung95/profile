@@ -30,7 +30,9 @@ const Comments = () => {
       <TitleStyle title={"Comment Section"} />
       <CommentForm updateLastComment={updateLastCommentHandler} />
       <div className="border-b-2 border-y-zinc-800"></div>
-      <CommentList firstComments={firstComments} lastKey={firstLastDocKey} />
+      <div id="" className="">
+        <CommentList firstComments={firstComments} lastKey={firstLastDocKey} />
+      </div>
     </SlideAnimate>
   );
 };

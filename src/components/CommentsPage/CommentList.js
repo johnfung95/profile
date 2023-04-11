@@ -31,13 +31,12 @@ const CommentList = ({ firstComments, lastKey }) => {
   if (moreComments && moreComments.length > 0) {
     return (
       <InfiniteScroll
-        className="scrollbar"
         dataLength={moreComments.length}
         next={fetchMoreComments}
         loader={isLoading && <div>Loading...</div>}
         endMessage={"No more."}
         hasMore={true}
-        scrollableTarget="stage"
+        scrollableTarget="scrollableDiv"
       >
         {moreComments.map((comment) => {
           return (

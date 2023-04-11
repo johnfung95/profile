@@ -12,7 +12,14 @@ const Stage = ({ content }) => {
   } else if (content === "contacts") {
     text = <Contacts />;
   } else if (content === "comments") {
-    text = <Comments />;
+    return (
+      <div
+        id="scrollableDiv"
+        className="overflow-y-scroll scrollbar h-screen md:row-start-auto md:h-full md:w-full md:col-span-2"
+      >
+        <Comments />
+      </div>
+    );
   }
 
   return (

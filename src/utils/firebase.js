@@ -61,7 +61,7 @@ export const fetchInitialRecords = async () => {
   const q = query(
     collection(db, "comments"),
     orderBy("unixTime", "desc"),
-    limit(6)
+    limit(10)
   );
 
   const arr = [];
@@ -78,7 +78,7 @@ export const fetchMoreRecords = async (lastKey) => {
   const q = query(
     collection(db, "comments"),
     orderBy("unixTime", "desc"),
-    limit(6),
+    limit(10),
     startAfter(lastKey)
   );
 

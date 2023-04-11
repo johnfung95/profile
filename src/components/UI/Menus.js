@@ -21,7 +21,7 @@ const Menus = ({ clickPage, currentPage }) => {
   };
 
   return (
-    <header className="p-2">
+    <header className="md:p-2">
       <nav>
         <div
           className="menuBarContainer cursor-pointer md:hidden"

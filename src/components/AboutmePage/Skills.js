@@ -9,7 +9,6 @@ const Skills = () => {
   useEffect(() => {
     const getRecs = async () => {
       const data = await fetchSkillsRecords();
-      console.log(data);
       setSkillData(data);
     };
 
@@ -21,7 +20,9 @@ const Skills = () => {
       <TitleStyle title={"Skills"} />
       <div className="mt-2 m-auto flex flex-col justify-center items-center text-center md:mt-8 md:grid md:grid-cols-2 md:place-items-center">
         {skillData.map((data) => {
-          return <SkillCard name={data.name} imgPath={data.img} />;
+          return (
+            <SkillCard key={data.name} name={data.name} imgPath={data.img} />
+          );
         })}
       </div>
     </div>

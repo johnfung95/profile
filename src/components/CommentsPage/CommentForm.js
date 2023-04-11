@@ -41,7 +41,7 @@ const CommentForm = ({ updateLastComment }) => {
   };
 
   return (
-    <form className="text-base my-4">
+    <form className="text-sm my-4 md:text-base">
       <div className="flex flex-col mx-4 my-2">
         <label htmlFor="name">Your Name:</label>
         <input

@@ -6,6 +6,7 @@
     .scrollbar::-webkit-scrollbar {
       width: 10px;
       height: 10px;
+      overflow-y: visible;
     }
   
     .scrollbar::-webkit-scrollbar-track {
@@ -110,7 +111,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .min-avatar-width {
-  min-width: 3rem
+  min-width: 2rem
 }
 
 .menuBarContainer {
@@ -129,7 +130,11 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   margin: 0.25rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { 
+  .min-avatar-width {
+    min-width: 3rem
+  }
+
   .enlarge {
     transition: all 0.8s ease-in-out
   }
