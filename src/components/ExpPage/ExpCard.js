@@ -9,16 +9,24 @@ const ExpCard = ({
 }) => {
   console.log(imgPath);
   return (
-    <div className="my-4 bg-zinc-900 w-1/2 rounded-xl p-4 skew-y-6 expCard">
-      <div className="-mt-7">
-        {fromyear} - {toyear}
+    <div className="expCard flex justify-between items-center w-full h-fit bg-zinc-900 rounded-xl p-2 text-sm md:my-5 md:py-4 md:text-base md:skew-y-6 md:w-9/12">
+      <div className="flex flex-col justify-center items-between md:my-2">
+        <div className="md:-mt-9">
+          {fromyear} - {toyear}
+        </div>
+        <div className="py-2">
+          <p>{company}</p>
+          {secon && (
+            <p className="text-xs italic md:text-sm">{`(${secon_company})`}</p>
+          )}
+        </div>
+        <p>{title}</p>
       </div>
-      <div className="flex justify-between items-center">
-        <p>{company}</p>
-        {secon && <p className="text-sm italic">{`(${secon_company})`}</p>}
-        <img className="w-20 h-12 -mr-12" src={imgPath} alt={company}></img>
-      </div>
-      <p>{title}</p>
+      <img
+        className="h-12 w-20 md:mr-0 md:w-28 md:h-20 md:-mr-12"
+        src={imgPath}
+        alt={company}
+      ></img>
     </div>
   );
 };

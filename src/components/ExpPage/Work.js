@@ -18,7 +18,7 @@ const Work = () => {
   return (
     <React.Fragment>
       <TitleStyle title={"Working Experiences"} />
-      <div className="my-8 grid grid-cols-1 place-items-center gap-4">
+      <div className="my-4 grid grid-cols-1 place-items-center gap-4 md:my-8">
         {expData.map((data) => {
           return (
             <ExpCard

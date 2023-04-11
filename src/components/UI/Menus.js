@@ -10,9 +10,9 @@ const Menus = ({ clickPage, currentPage }) => {
   };
 
   return (
-    <header className="p-2 hidden md:block">
-      <nav>
-        <ul className="md:flex md:flex-col justify-around">
+    <header className="p-2">
+      <nav className="">
+        <ul className="hidden md:block md:flex md:flex-col md:justify-around">
           <li
             className={`menuBtn md:p-2 md:rounded-r-lg md:bg-zinc-900 z-10 my-2 hover:text-orange-300 hover:menuBtn ${
               currentPage === "aboutme" ? "text-orange-300 translate-x-3" : ""

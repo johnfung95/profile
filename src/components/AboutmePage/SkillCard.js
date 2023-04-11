@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const SkillCard = ({ name, imgPath }) => {
   return (
-    <div className="w-48 h-full my-2">
+    <div className="h-full w-48 my-2">
       <motion.div
         className="w-full h-fit bg-zinc-700 rounded-lg"
         initial={{ scale: 1 }}

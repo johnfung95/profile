@@ -38,13 +38,13 @@ const Landing = ({ enterSite }) => {
           ‘What doesn't kill you makes you stronger’
         </h1>
         <div className="mt-8 md:pl-8">
-          <p className="pb-2">
+          <p className="pb-2 mx-4 md:mx-0">
             Hello, people call me John Chick. I don't know why ...
           </p>
-          <p className="pb-2">
+          <p className="pb-2 mx-4 md:mx-0">
             A programmer, software engineer and tech enthusiast.
           </p>
-          <p className="pb-2">
+          <p className="pb-2 mx-4 md:mx-0">
             I am fond of coding and keen on problem-solving.
           </p>
           <button
