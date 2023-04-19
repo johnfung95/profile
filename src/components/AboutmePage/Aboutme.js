@@ -6,18 +6,7 @@ import SlideAnimate from "../UI/SlideAnimate";
 
 const Aboutme = () => {
   return (
-    <SlideAnimate
-      className="text-base mx-4 mb-2"
-      layout
-      initial={{ x: 100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{
-        default: {
-          ease: "easeOut",
-          duration: 0.8,
-        },
-      }}
-    >
+    <SlideAnimate>
       <Description />
       <div className="border-b-2 border-y-zinc-800"></div>
       <Quotes />

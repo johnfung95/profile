@@ -3,7 +3,7 @@ import MobileProfile from "../ProfilePage/MobileProfile";
 import MenuList from "./MenuList";
 import { ImCross } from "react-icons/im";
 
-const MobileMenus = ({ clickPage, currentPage, closeModal }) => {
+const MobileMenus = ({ closeModal }) => {
   const clsBtnHandler = () => {
     closeModal();
   };
@@ -23,12 +23,7 @@ const MobileMenus = ({ clickPage, currentPage, closeModal }) => {
         </div>
       </div>
       <MobileProfile />
-      <MenuList
-        clickPage={clickPage}
-        currentPage={currentPage}
-        mobile={true}
-        closeModal={closeModal}
-      />
+      <MenuList mobile={true} closeModal={closeModal} />
     </div>
   );
 };

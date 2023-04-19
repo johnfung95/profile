@@ -1,12 +1,12 @@
 import React from "react";
-import TextTemplate from "../UI/TextTemplate";
 import TitleStyle from "../UI/TitleStyle";
+import HobbyCard from "./HobbyCard";
 
 const Hobbies = () => {
   return (
     <React.Fragment>
-      <TitleStyle title={"Hobbies"} />
-      <TextTemplate text={"My Hobbies and Interests"} />
+      <TitleStyle title={"Hobbies and Interests"} />
+      <HobbyCard />
     </React.Fragment>
   );
 };

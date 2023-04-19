@@ -5,8 +5,8 @@ const SlideAnimate = ({ children }) => {
     <motion.div
       className="text-base mx-4 mb-2"
       layout
-      initial={{ x: 100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{
         default: {
           ease: "easeOut",
