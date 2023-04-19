@@ -25,11 +25,9 @@ const QuoteCard = () => {
             className="text-center mb-4 pb-4 hover:cursor-grab active:cursor-grabbing"
           >
             <div className="flex flex-col justify-center items-center contents-center">
-              <h1 className="quotes text-base my-8 md:text-2xl">
-                {data.quote}
-              </h1>
+              <h1 className="quotes text-lg my-8 md:text-2xl">{data.quote}</h1>
               <div className="text-center">
-                <p>{data.from}</p>
+                <p className="text-sm md:text-base">{data.from}</p>
               </div>
             </div>
           </SwiperSlide>

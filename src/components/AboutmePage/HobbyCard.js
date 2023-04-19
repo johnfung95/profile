@@ -4,7 +4,7 @@ const HobbyCard = () => {
   return (
     <div className="my-4 md:grid md:grid-cols-3">
       {hobbies.map((hobby) => {
-        return <div id={hobby.id}>{hobby.content}</div>;
+        return <div key={hobby.id}>{hobby.content}</div>;
       })}
     </div>
   );

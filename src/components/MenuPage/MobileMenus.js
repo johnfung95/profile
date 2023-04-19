@@ -11,7 +11,7 @@ const MobileMenus = ({ closeModal }) => {
   return (
     <div className="fixed w-3/4 h-full bg-slate-800 z-20 opacity-100 md:hidden">
       <div className="flex justify-end -mr-3">
-        <div className="closeBtnContainer cursor-pointer ]">
+        <div className="closeBtnContainer cursor-pointer">
           <ImCross
             onClick={clsBtnHandler}
             style={{
