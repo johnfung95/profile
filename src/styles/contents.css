@@ -1,0 +1,50 @@
+.motto {
+  font-family: "Libre Baskerville", serif;
+}
+
+.quotes {
+  font-family: "Anton", sans-serif;
+}
+
+.trans {
+  z-index: -9;
+}
+
+.customFirst::first-letter {
+  color: #f59e0b;
+}
+
+.contact:hover {
+  color: rgb(118, 208, 250);
+}
+
+.warn {
+  background-color: #f3ab99;
+}
+
+.min-avatar-width {
+  min-width: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .min-avatar-width {
+    min-width: 3rem;
+  }
+
+  .enlarge {
+    transition: all 0.8s ease-in-out;
+  }
+
+  .enlarge:hover {
+    transform: scale(1.35);
+  }
+
+  .expCard {
+    transition: all 0.8s ease-in-out;
+  }
+
+  .expCard:hover {
+    transform: skewY(3deg);
+    transform: scale(1.2);
+  }
+}

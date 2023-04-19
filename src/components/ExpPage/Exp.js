@@ -1,5 +1,5 @@
 import React from "react";
-import Quotes from "./Quotes";
+import Skills from "./Skills";
 import Work from "./Work";
 import SlideAnimate from "../UI/SlideAnimate";
 
@@ -8,7 +8,7 @@ const Exp = () => {
     <SlideAnimate>
       <Work />
       <div className="border-b-2 border-y-zinc-800"></div>
-      <Quotes />
+      <Skills />
     </SlideAnimate>
   );
 };

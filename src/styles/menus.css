@@ -1,0 +1,26 @@
+.menuBarContainer {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: static;
+  margin: 1rem 1rem;
+  background-color: orange;
+  border-radius: 100%;
+}
+
+.menuBar {
+  width: 0.9rem;
+  height: 0.15rem;
+  background-color: white;
+  margin: 0.25rem;
+}
+
+.closeBtnContainer {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: static;
+  background-color: orange;
+  margin: 0;
+  border-radius: 100%;
+}

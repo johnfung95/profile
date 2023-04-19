@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Profile from "./Profile";
-import Menus from "./UI/Menus";
-import Stage from "./UI/Stage";
+import Profile from "../Profile/Profile";
+import Menus from "../Menus/Menus";
+import Stage from "../UI/Stage";
 
-const ContentCard = ({ children }) => {
+const ContentCard = () => {
   const [type, setType] = useState("aboutme");
 
   const changePageHandler = (newType) => {

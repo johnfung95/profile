@@ -1,6 +1,6 @@
 import React from "react";
 import Description from "./Description";
-import Skills from "./Skills";
+import Quotes from "./Quotes";
 import Hobbies from "./Hobbies";
 import SlideAnimate from "../UI/SlideAnimate";
 
@@ -20,7 +20,7 @@ const Aboutme = () => {
     >
       <Description />
       <div className="border-b-2 border-y-zinc-800"></div>
-      <Skills />
+      <Quotes />
       <div className="border-b-2 border-y-zinc-800"></div>
       <Hobbies />
     </SlideAnimate>

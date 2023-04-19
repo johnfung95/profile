@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Landing from "./UI/Landing";
-import ContentCard from "./ContentCard";
+import Landing from "./Contents/Landing";
+import ContentCard from "./Contents/ContentCard";
 
 const App = () => {
   const [isEnterSite, setIsEnterSite] = useState(false);
