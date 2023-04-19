@@ -1,5 +1,5 @@
 import React from "react";
-import MobileMenus from "../Menus/MobileMenus";
+import MobileMenus from "../MenuPage/MobileMenus";
 
 const Modal = ({ clickPage, currentPage, closeModal }) => {
   return (

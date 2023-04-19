@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Landing from "./Contents/Landing";
-import ContentCard from "./Contents/ContentCard";
+import Landing from "./ContentsPage/Landing";
+import Content from "./ContentsPage/Content";
 
 const App = () => {
   const [isEnterSite, setIsEnterSite] = useState(false);
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <React.Fragment>
       {!isEnterSite && <Landing enterSite={enterSiteHandler} />}
-      {isEnterSite && <ContentCard />}
+      {isEnterSite && <Content />}
     </React.Fragment>
   );
 };

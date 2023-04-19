@@ -1,5 +1,5 @@
 import React from "react";
-import MobileProfile from "../Profile/MobileProfile";
+import MobileProfile from "../ProfilePage/MobileProfile";
 import MenuList from "./MenuList";
 import { ImCross } from "react-icons/im";
 

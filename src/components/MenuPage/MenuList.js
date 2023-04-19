@@ -1,16 +1,15 @@
+import React, { useContext } from "react";
 import { FaAddressCard } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { AiOutlineMessage } from "react-icons/ai";
+import MenuContext from "../../context/menucontext";
 
-const MenuList = ({
-  clickPage,
-  currentPage,
-  mobile = false,
-  closeModal = null,
-}) => {
+const MenuList = ({ mobile = false, closeModal = null }) => {
+  const ctx = useContext(MenuContext);
+
   const buttonHandler = (e) => {
-    clickPage(e.target.dataset.name);
+    ctx.clickPage(e.target.dataset.name);
     if (mobile) {
       closeModal();
     }
@@ -28,7 +27,9 @@ const MenuList = ({
     >
       <li
         className={`menuBtn hover:menuBtn ${
-          currentPage === "aboutme" ? `text-orange-300 ${itemTranslation}` : ""
+          ctx.currentPage === "aboutme"
+            ? `text-orange-300 ${itemTranslation}`
+            : ""
         }`}
       >
         <div className="text-center hover:cursor-pointer">
@@ -48,7 +49,7 @@ const MenuList = ({
       </li>
       <li
         className={`menuBtn hover:menuBtn ${
-          currentPage === "exp" ? `text-orange-300 ${itemTranslation}` : ""
+          ctx.currentPage === "exp" ? `text-orange-300 ${itemTranslation}` : ""
         }`}
       >
         <div className="text-center hover:cursor-pointer">
@@ -64,7 +65,9 @@ const MenuList = ({
       </li>
       <li
         className={`menuBtn hover:menuBtn ${
-          currentPage === "contacts" ? `text-orange-300 ${itemTranslation}` : ""
+          ctx.currentPage === "contacts"
+            ? `text-orange-300 ${itemTranslation}`
+            : ""
         }`}
       >
         <div className="text-center hover:cursor-pointer">
@@ -81,7 +84,9 @@ const MenuList = ({
       </li>
       <li
         className={`menuBtn hover:menuBtn ${
-          currentPage === "comments" ? `text-orange-300 ${itemTranslation}` : ""
+          ctx.currentPage === "comments"
+            ? `text-orange-300 ${itemTranslation}`
+            : ""
         }`}
       >
         <div className="text-center hover:cursor-pointer">

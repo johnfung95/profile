@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MenuList from "./MenuList";
 import Modal from "../UI/Modal";
+import MenuContext from "../../context/menucontext";
 
-const Menus = ({ clickPage, currentPage }) => {
+const Menus = () => {
+  const ctx = useContext(MenuContext);
+
   const [openModal, setOpenModal] = useState(false);
 
   const openModalHandler = () => {
@@ -28,12 +31,12 @@ const Menus = ({ clickPage, currentPage }) => {
         </div>
         {openModal && (
           <Modal
-            clickPage={clickPage}
-            currentPage={currentPage}
+            clickPage={ctx.clickPage}
+            currentPage={ctx.currentPage}
             closeModal={closeModalHandler}
           />
         )}
-        <MenuList clickPage={clickPage} currentPage={currentPage} />
+        <MenuList />
       </nav>
     </header>
   );

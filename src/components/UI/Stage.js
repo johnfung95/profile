@@ -1,17 +1,21 @@
+import React, { useContext } from "react";
 import Aboutme from "../AboutmePage/Aboutme";
 import Comments from "../CommentsPage/Comments";
 import Contacts from "../ContactsPage/Contacts";
 import Exp from "../ExpPage/Exp";
+import MenuContext from "../../context/menucontext";
 
-const Stage = ({ content }) => {
+const Stage = () => {
+  const ctx = useContext(MenuContext);
+
   let text = null;
-  if (content === "aboutme") {
+  if (ctx.currentPage === "aboutme") {
     text = <Aboutme />;
-  } else if (content === "exp") {
+  } else if (ctx.currentPage === "exp") {
     text = <Exp />;
-  } else if (content === "contacts") {
+  } else if (ctx.currentPage === "contacts") {
     text = <Contacts />;
-  } else if (content === "comments") {
+  } else if (ctx.currentPage === "comments") {
     return (
       <div
         id="scrollableDiv"
