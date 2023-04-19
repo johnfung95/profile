@@ -22,11 +22,15 @@ const QuoteCard = () => {
         return (
           <SwiperSlide
             key={data.id}
-            className="text-center pb-4 mb-12 hover:cursor-grab active:cursor-grabbing"
+            className="text-center mb-4 pb-4 hover:cursor-grab active:cursor-grabbing"
           >
-            <h1 className="quotes text-3xl my-8">{data.quote}</h1>
-            <div className="text-center">
-              <p>{data.from}</p>
+            <div className="flex flex-col justify-center items-center contents-center">
+              <h1 className="quotes text-base my-8 md:text-2xl">
+                {data.quote}
+              </h1>
+              <div className="text-center">
+                <p>{data.from}</p>
+              </div>
             </div>
           </SwiperSlide>
         );
