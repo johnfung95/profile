@@ -3,6 +3,7 @@ import App from "./components/App";
 import ReactDOM from "react-dom/client";
 import Background from "./components/UI/Background";
 import { MenuContextProvider } from "./context/menucontext";
+import { Analytics } from "@vercel/analytics/react";
 import "./styles/global.css";
 import "./styles/menus.css";
 import "./styles/btns.css";
@@ -15,5 +16,6 @@ root.render(
     <MenuContextProvider>
       <App />
     </MenuContextProvider>
+    <Analytics />
   </React.StrictMode>
 );
