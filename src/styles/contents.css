@@ -26,6 +26,19 @@
   min-width: 2rem;
 }
 
+.langBar {
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.langFillBar {
+  height: 100%;
+  background-color: rgb(217, 119, 6);
+  border-radius: inherit;
+  text-align: right;
+}
+
 @media screen and (min-width: 768px) {
   .min-avatar-width {
     min-width: 3rem;

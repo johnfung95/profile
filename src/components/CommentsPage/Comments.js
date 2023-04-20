@@ -9,7 +9,7 @@ const Comments = () => {
   const [firstComments, setFirstComments] = useState([]);
   const [firstLastDocKey, setFirstLastDocKey] = useState(null);
 
-  const updateLastCommentHandler = async (newComment) => {
+  const updateLastCommentHandler = async () => {
     const { arr, lastKey } = await fetchInitialRecords();
     setFirstComments(arr);
     setFirstLastDocKey(lastKey);
@@ -30,9 +30,7 @@ const Comments = () => {
       <TitleStyle title={"Comment Section"} />
       <CommentForm updateLastComment={updateLastCommentHandler} />
       <div className="border-b-2 border-y-zinc-800"></div>
-      <div id="" className="">
-        <CommentList firstComments={firstComments} lastKey={firstLastDocKey} />
-      </div>
+      <CommentList firstComments={firstComments} lastKey={firstLastDocKey} />
     </SlideAnimate>
   );
 };

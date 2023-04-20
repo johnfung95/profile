@@ -16,7 +16,6 @@ const MenuList = ({ mobile = false, closeModal = null }) => {
   };
 
   const itemTranslation = mobile ? "" : "translate-x-3";
-  console.log(itemTranslation);
 
   return (
     <ul
