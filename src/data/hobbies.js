@@ -4,6 +4,7 @@ import { FcReading } from "react-icons/fc";
 import { BiTennisBall } from "react-icons/bi";
 import { RiBilliardsFill } from "react-icons/ri";
 import { FaHiking } from "react-icons/fa";
+import { CgGym } from "react-icons/cg";
 
 export const hobbies = [
   {
@@ -23,6 +24,12 @@ export const hobbies = [
     content: "Reading",
     pic: <FcReading />,
     css: "text-2xl",
+  },
+  {
+    id: "gym",
+    content: "Gym",
+    pic: <CgGym />,
+    css: "text-2xl text-blue-400",
   },
   {
     id: "tennis",

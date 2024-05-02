@@ -1,14 +1,13 @@
 import React from "react";
-import Skills from "./Skills";
-import Work from "./Work";
 import SlideAnimate from "../UI/SlideAnimate";
+import WorkTimeLine from "./WorkTimeLine";
+import TitleStyle from "../UI/TitleStyle";
 
 const Exp = () => {
   return (
     <SlideAnimate>
-      <Work />
-      <div className="border-b-2 border-y-zinc-800"></div>
-      <Skills />
+      <TitleStyle title={"Working Experiences"} />
+      <WorkTimeLine />
     </SlideAnimate>
   );
 };

@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { FaAddressCard } from "react-icons/fa";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import { FiPhone } from "react-icons/fi";
+
 import { AiOutlineMessage } from "react-icons/ai";
+import { FaProjectDiagram } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
 import MenuContext from "../../context/menucontext";
 
 const MenuList = ({ mobile = false, closeModal = null }) => {
@@ -32,7 +34,7 @@ const MenuList = ({ mobile = false, closeModal = null }) => {
             : ""
         }`}
       >
-        <div className="text-center hover:cursor-pointer">
+        <div className="text-center hover:cursor-pointer" data-name="aboutme">
           <FaAddressCard
             onClick={buttonHandler}
             data-name="aboutme"
@@ -44,6 +46,24 @@ const MenuList = ({ mobile = false, closeModal = null }) => {
           ></FaAddressCard>
           <p data-name="aboutme" onClick={buttonHandler}>
             About Me
+          </p>
+        </div>
+      </li>
+      <li
+        className={`menuBtn hover:menuBtn ${
+          ctx.currentPage === "skills"
+            ? `text-orange-300 ${itemTranslation}`
+            : ""
+        }`}
+      >
+        <div className="text-center hover:cursor-pointer">
+          <GiSkills
+            onClick={buttonHandler}
+            data-name="skills"
+            style={{ width: "100%", margin: "auto", fontSize: "1.3rem" }}
+          ></GiSkills>
+          <p data-name="skills" onClick={buttonHandler}>
+            Skills
           </p>
         </div>
       </li>
@@ -65,26 +85,26 @@ const MenuList = ({ mobile = false, closeModal = null }) => {
       </li>
       <li
         className={`menuBtn hover:menuBtn ${
-          ctx.currentPage === "contacts"
+          ctx.currentPage === "projects"
             ? `text-orange-300 ${itemTranslation}`
             : ""
         }`}
       >
         <div className="text-center hover:cursor-pointer">
-          <FiPhone
+          <FaProjectDiagram
             onClick={buttonHandler}
-            data-name="contacts"
+            data-name="projects"
             style={{ width: "100%", margin: "auto", fontSize: "1.3rem" }}
-          ></FiPhone>
+          ></FaProjectDiagram>
 
-          <p data-name="contacts" onClick={buttonHandler}>
-            Contacts
+          <p data-name="projects" onClick={buttonHandler}>
+            Projects
           </p>
         </div>
       </li>
       <li
         className={`menuBtn hover:menuBtn ${
-          ctx.currentPage === "comments"
+          ctx.currentPage === "contacts"
             ? `text-orange-300 ${itemTranslation}`
             : ""
         }`}

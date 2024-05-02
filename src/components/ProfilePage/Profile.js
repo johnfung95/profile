@@ -1,12 +1,13 @@
 import Typewriter from "typewriter-effect";
 import ProfileBtns from "./ProfileBtns";
+import ContactMeans from "./ContactMeans";
 
 const Profile = () => {
   return (
     <div className="hidden h-2/5 w-full mx-0 md:border-2 md:border-zinc-800 md:block md:h-full md:flex md:flex-col md:justify-center md:items-center md:w-full">
       <div className="h-full flex flex-col-reverse">
         <img
-          className="w-48 h-56 bg-slate-900 mx-auto border-none rounded-full contain enlarge md:my-8"
+          className="w-44 h-56 bg-slate-900 mx-auto border-none rounded-full contain enlarge md:my-8 hover:cursor-zoom-in"
           src="/profile-pic.png"
           alt="my logo"
         />
@@ -34,6 +35,7 @@ const Profile = () => {
           />
         </div>
         <ProfileBtns />
+        <ContactMeans />
       </div>
     </div>
   );

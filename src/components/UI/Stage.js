@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import Aboutme from "../AboutmePage/Aboutme";
 import Comments from "../CommentsPage/Comments";
-import Contacts from "../ContactsPage/Contacts";
 import Exp from "../ExpPage/Exp";
 import MenuContext from "../../context/menucontext";
+import Projects from "../ProjectsPage/Projects";
+import Skills from "../SkillsPage/Skills";
 
 const Stage = () => {
   const ctx = useContext(MenuContext);
@@ -11,10 +12,12 @@ const Stage = () => {
   let text = null;
   if (ctx.currentPage === "aboutme") {
     text = <Aboutme />;
+  } else if (ctx.currentPage === "skills") {
+    text = <Skills />;
   } else if (ctx.currentPage === "exp") {
     text = <Exp />;
-  } else if (ctx.currentPage === "contacts") {
-    text = <Contacts />;
+  } else if (ctx.currentPage === "projects") {
+    text = <Projects />;
   } else if (ctx.currentPage === "comments") {
     return (
       <div

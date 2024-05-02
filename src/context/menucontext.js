@@ -9,7 +9,9 @@ export const MenuContextProvider = ({ children }) => {
   const [newPage, setNewPage] = useState("aboutme");
 
   const pageClickHandler = (newName) => {
-    setNewPage(newName);
+    if (newName && newName !== "") {
+      setNewPage(newName);
+    }
   };
 
   return (
