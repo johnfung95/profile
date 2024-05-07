@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import TitleStyle from "../UI/TitleStyle";
 import SkillCard from "./SkillCard";
-import { fetchSkillsRecords } from "../../utils/firebase";
 import SlideAnimate from "../UI/SlideAnimate";
+import SoftSkills from "./SoftSkills";
+import { fetchSkillsRecords } from "../../utils/firebase";
 
 const Skills = () => {
   const [skillData, setSkillData] = useState([]);
@@ -18,8 +19,9 @@ const Skills = () => {
 
   return (
     <SlideAnimate>
+      <SoftSkills />
       <div>
-        <TitleStyle title={"Skills"} />
+        <TitleStyle title={"Technical Skills"} />
         <div className="mt-2 m-auto flex flex-col justify-center items-center text-center md:mt-8 md:grid md:grid-cols-2 md:place-items-center">
           {skillData.map((data) => {
             return (
