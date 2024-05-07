@@ -1,4 +1,4 @@
-import { FcAddressBook, FcIphone } from "react-icons/fc";
+import { FcIphone } from "react-icons/fc";
 import { SiMinutemailer } from "react-icons/si";
 
 const ContactMeans = () => {
