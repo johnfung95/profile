@@ -38,7 +38,7 @@ const Background = () => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 10,
             },
             repulse: {
               distance: 200,
@@ -75,7 +75,7 @@ const Background = () => {
               enable: true,
               area: 4000,
             },
-            value: 50,
+            value: 60,
           },
           opacity: {
             value: 0.5,
@@ -84,7 +84,7 @@ const Background = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 2 },
+            value: { min: 1, max: 5 },
           },
         },
         detectRetina: true,

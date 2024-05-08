@@ -8,11 +8,11 @@ const Content = () => {
   return (
     <React.Fragment>
       <main className="w-full h-full">
-        <section>
-          {/* trial music player */}
-          {/* <MusicPlayer /> */}
-        </section>
-        <section className="background-black sm:flex-wrap md:w-full md:h-full md:flex md:justify-center md:items-center md:flex-nowrap md:-mt-12">
+        {/* <section> */}
+        {/* trial music player */}
+        {/* <MusicPlayer /> */}
+        {/* </section> */}
+        <section className="background-black sm:flex-wrap md:w-full md:h-full md:flex md:justify-center md:items-center md:flex-nowrap">
           <div className="md:-mr-12">
             <Menus />
           </div>
