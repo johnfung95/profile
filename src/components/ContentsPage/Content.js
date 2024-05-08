@@ -2,12 +2,17 @@ import React from "react";
 import Profile from "../ProfilePage/Profile";
 import Stage from "../UI/Stage";
 import Menus from "../MenuPage/Menus";
+// import MusicPlayer from "../MusicPlayer/MusicPlayer";
 
 const Content = () => {
   return (
     <React.Fragment>
       <main className="w-full h-full">
-        <section className="background-black sm:flex-wrap md:w-full md:h-full md:flex md:justify-center md:items-center md:flex-nowrap">
+        <section>
+          {/* trial music player */}
+          {/* <MusicPlayer /> */}
+        </section>
+        <section className="background-black sm:flex-wrap md:w-full md:h-full md:flex md:justify-center md:items-center md:flex-nowrap md:-mt-12">
           <div className="md:-mr-12">
             <Menus />
           </div>

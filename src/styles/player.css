@@ -1,0 +1,20 @@
+._wrapper_1sefb_1 {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+} 
+
+._title_1ldbx_1, ._time_ac0au_1, ._wrapper_1ssds_1 {
+    font-size: 0.8rem;
+}
+
+._play_rfl62_1, ._loop_1v4pf_1, ._previous_1mino_1, ._next_147p5_1, ._pause_1talx_1, ._shuffle_15ul3_1 {
+    width: 1rem;
+    height: 1rem;
+}
+
+._wrapper_l8wb1_1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

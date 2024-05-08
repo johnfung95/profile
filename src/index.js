@@ -7,6 +7,7 @@ import "./styles/global.css";
 import "./styles/menus.css";
 import "./styles/btns.css";
 import "./styles/contents.css";
+// import "./styles/player.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
