@@ -2,7 +2,7 @@
 - Space theme
     - with particles colliding with each other
 - Tech Stack
-    - NextJS
+    - ReactJS
         - SPA design
         - using Vanilla Javascript to write reuseable components.
         - using React context hooks for simpler state managements.
